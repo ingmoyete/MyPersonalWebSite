@@ -76,7 +76,7 @@ namespace PersonalWebDavid.Controllers
                         : HttpContext.Server.MapPath(url.url.downloadCVEs);
 
                     string message = EmailContactForm.sendEmail("davidalcocerinfo@gmail.com", "ingmoyete@gmail.com", cv.Code,
-                                                "david5717info6828", "someone download your cv. Code used: " + cv.Code + ". Name: " + cv.ForWho, "Error", "Success", cv.ForWho);
+                                                "**********", "someone download your cv. Code used: " + cv.Code + ". Name: " + cv.ForWho, "Error", "Success", cv.ForWho);
                     return File(fileName, MimeMapping.GetMimeMapping(fileName));
                 }
 
