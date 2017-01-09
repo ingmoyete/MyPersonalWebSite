@@ -1,0 +1,58 @@
+﻿@helper writeItem(string companyImage, string description, string projectTitle,
+            string skillsContent, string timeContent, string webContent, string webUrl = "#")
+{
+    <section class="itemProject sa-features-1 whiteBackground about">
+        <div class="container">
+            <div class="row">
+
+                <!-- Title -->
+                <div class="col-xs-12 col-sm-11 col-sm-offset-1 hidden-md hidden-lg sa-section-header with-sub-section-heading">
+                    <div class="wrapperItemTitleAnDescription">
+                        <h1 class="banger heading">@projectTitle</h1>
+                        <p>@description</p>
+
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-7 col-md-offset-0">
+                    <img src="@companyImage" class="img-responsive center-block" alt="" />              
+                </div>
+
+
+                <!-- Texts -->
+                <div class="col-xs-12 col-sm-5 col-md-5 sa-features-text">
+
+                    <div class="hidden-xs hidden-sm sa-section-header with-sub-section-heading">
+                        <h1 class="banger heading">@projectTitle</h1>
+                        <p>@description</p>
+                    </div>
+
+                    <!-- Project Information -->
+                    <div class="project-information">
+                        <ul class="nav">
+                            <li>
+                                <h4 class="teg-title">@UI.itemUI.skills</h4>
+                                <p>@skillsContent</p>
+                            </li>
+                            <li>
+                                <h4 class="teg-title">@UI.itemUI.time</h4>
+                                <p>@timeContent</p>
+                            </li>
+                            <li>
+                                <h4 class="teg-title">@UI.itemUI.web</h4>
+                                <a href="@webUrl" target="_blank">@webContent</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="btn-form btn-scroll">
+                        <a href="@url.languages.lang/@url.url.projectsSection/#@url.url.projectsThumb" class="btn"><i class="fa fa-long-arrow-left"></i>@UI.itemUI.backButton</a>
+                        <a href="@url.languages.lang/@url.url.aboutSection/#@url.url.skillsId" class="btn"><i class="@partials.about.codeIcon"></i>@UI.itemUI.skillsBackButton</a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End: .container -->
+    </section>
+}

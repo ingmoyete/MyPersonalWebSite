@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="aaltoAlt" xml:space="preserve">
+    <value>Universidad Aalto</value>
+    <comment>alt</comment>
+  </data>
+  <data name="aaltoDate" xml:space="preserve">
+    <value>2012 - 2013</value>
+    <comment>education</comment>
+  </data>
+  <data name="aaltoDescription" xml:space="preserve">
+    <value>Programa Erasmus</value>
+    <comment>education</comment>
+  </data>
+  <data name="aaltoImage" xml:space="preserve">
+    <value>/Images/aalto.png</value>
+    <comment>image</comment>
+  </data>
+  <data name="aaltoPlace" xml:space="preserve">
+    <value>Helsinki</value>
+    <comment>education</comment>
+  </data>
+  <data name="aaltoUni" xml:space="preserve">
+    <value>Universidad de Aalto</value>
+    <comment>education</comment>
+  </data>
+  <data name="abengoa" xml:space="preserve">
+    <value>Abengoa</value>
+    <comment>experience</comment>
+  </data>
+  <data name="abengoaLabel" xml:space="preserve">
+    <value>Abengoa</value>
+    <comment>skills</comment>
+  </data>
+  <data name="albertoAlt" xml:space="preserve">
+    <value>Alberto Delgado</value>
+    <comment>alt</comment>
+  </data>
+  <data name="albertoImage" xml:space="preserve">
+    <value>/Images/people/Alberto.jpg</value>
+    <comment>image</comment>
+  </data>
+  <data name="albertoSay" xml:space="preserve">
+    <value>He sido compañero de David durante su etapa en Avanade. Con respecto a su trabajo allí, destacar sobre todo su buena integración en el equipo y su rápido aprendizaje en la tecnología que se estaba usando en el proyecto (Proyecto ERP en Dynamics AX)</value>
+    <comment>people</comment>
+  </data>
+  <data name="avanade" xml:space="preserve">
+    <value>Avanade</value>
+    <comment>experience</comment>
+  </data>
+  <data name="bootstrapFrontend" xml:space="preserve">
+    <value>Bootstrap</value>
+    <comment>skills</comment>
+  </data>
+  <data name="bootstrapFrontendValue" xml:space="preserve">
+    <value>90%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="canariasAlt" xml:space="preserve">
+    <value>Universidad De Las Palmas</value>
+    <comment>alt</comment>
+  </data>
+  <data name="canariasDate" xml:space="preserve">
+    <value>2010 - 2011</value>
+    <comment>education</comment>
+  </data>
+  <data name="canariasDescription" xml:space="preserve">
+    <value>Programa Séneca</value>
+    <comment>education</comment>
+  </data>
+  <data name="canariasImage" xml:space="preserve">
+    <value>/Images/canarias.png</value>
+    <comment>image</comment>
+  </data>
+  <data name="canariasPlace" xml:space="preserve">
+    <value>Islas Canarias</value>
+    <comment>education</comment>
+  </data>
+  <data name="canariasUni" xml:space="preserve">
+    <value>Universidad de Las Palmas</value>
+    <comment>education</comment>
+  </data>
+  <data name="codeIcon" xml:space="preserve">
+    <value>fa fa-code</value>
+    <comment>icon</comment>
+  </data>
+  <data name="contactButton" xml:space="preserve">
+    <value>Contáctame Ahora</value>
+    <comment>button</comment>
+  </data>
+  <data name="csharpBackend" xml:space="preserve">
+    <value>C#</value>
+    <comment>skills</comment>
+  </data>
+  <data name="csharpBackendValue" xml:space="preserve">
+    <value>90%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="cssFrontend" xml:space="preserve">
+    <value>CSS</value>
+    <comment>skills</comment>
+  </data>
+  <data name="cssFrontendValue" xml:space="preserve">
+    <value>90%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="daimlerLabel" xml:space="preserve">
+    <value>Daimler</value>
+    <comment>skills</comment>
+  </data>
+  <data name="dateAbengoa" xml:space="preserve">
+    <value>Febrero 2014 - Agosto 2014</value>
+    <comment>experience</comment>
+  </data>
+  <data name="dateAvanade" xml:space="preserve">
+    <value>Mayo 2015 - Mayo 2016</value>
+    <comment>experience</comment>
+  </data>
+  <data name="dateFreelancer" xml:space="preserve">
+    <value>Agosto 2014 - Mayo 2015</value>
+    <comment>experience</comment>
+  </data>
+  <data name="dateSabic" xml:space="preserve">
+    <value>Julio 2013 - Enero 2014</value>
+    <comment>experience</comment>
+  </data>
+  <data name="delfinAlt" xml:space="preserve">
+    <value>Escuela Delfin Idiomas</value>
+    <comment>alt</comment>
+  </data>
+  <data name="delfinDate" xml:space="preserve">
+    <value>2011 (3 meses)</value>
+    <comment>education</comment>
+  </data>
+  <data name="delfinDescription" xml:space="preserve">
+    <value>Ingles B2</value>
+    <comment>education</comment>
+  </data>
+  <data name="delfinImage" xml:space="preserve">
+    <value>/Images/delfin.png</value>
+    <comment>image</comment>
+  </data>
+  <data name="delfinPlace" xml:space="preserve">
+    <value>Dublín</value>
+    <comment>education</comment>
+  </data>
+  <data name="delfinUni" xml:space="preserve">
+    <value>Escuela Delfín Idiomas</value>
+    <comment>education</comment>
+  </data>
+  <data name="descriptionAbengoa" xml:space="preserve">
+    <value>Cálculo de balances de materia y energía para un sistema de evaporación multi-efecto y un sistema de tratamiento de fangos (dewatering)</value>
+    <comment>experience</comment>
+  </data>
+  <data name="descriptionAvanade" xml:space="preserve">
+    <value>Desarrollo de un ERP (Executive Resource Planning) para un importante supermercado.  Otras tareas adicionales:  desarrollo css/html, y MVC</value>
+    <comment>experience</comment>
+  </data>
+  <data name="descriptionFreelancer" xml:space="preserve">
+    <value>Creación/diseño de webs y aplicaciones para diversos clientes: empresa de construcción, perfiles personales, y pequeña aplicación de gestión</value>
+    <comment>experience</comment>
+  </data>
+  <data name="descriptionSabic" xml:space="preserve">
+    <value>Simulación y optimización de una planta de tratamiento de aguas real y en operación a través de un modelo matemático</value>
+    <comment>experience</comment>
+  </data>
+  <data name="descriptionWhat" xml:space="preserve">
+    <value>Disfruto programando, aprendiendo cosas nuevas y ayudando a otras personas con mis proyectos. Haz scroll hacia abajo para ver mi CV o haz click en:</value>
+    <comment>what</comment>
+  </data>
+  <data name="educationHeading" xml:space="preserve">
+    <value>EDUCACIÓN</value>
+    <comment>heading</comment>
+  </data>
+  <data name="educationWhat" xml:space="preserve">
+    <value>&lt;b&gt;Educación -&lt;/b&gt; Ingeniería Química cursada en diferentes universidades (Sevilla, Canarias, Helsinki).</value>
+    <comment>what</comment>
+  </data>
+  <data name="experienceWhat" xml:space="preserve">
+    <value>&lt;b&gt;Experiencia -&lt;/b&gt; Más de dos años de experiencia (tratamiento aguas, energía, IT).</value>
+    <comment>what</comment>
+  </data>
+  <data name="freelancerIsmael" xml:space="preserve">
+    <value>IsmaelÁbrego</value>
+    <comment>experience</comment>
+  </data>
+  <data name="freelancerJmHermanos" xml:space="preserve">
+    <value>Jmhermanos</value>
+    <comment>experience</comment>
+  </data>
+  <data name="hatIcon" xml:space="preserve">
+    <value>fa fa-graduation-cap</value>
+    <comment>icon</comment>
+  </data>
+  <data name="headingBackend" xml:space="preserve">
+    <value>Back-End</value>
+    <comment>skills</comment>
+  </data>
+  <data name="headingFrontend" xml:space="preserve">
+    <value>Front-End</value>
+    <comment>skills</comment>
+  </data>
+  <data name="htmlFrontend" xml:space="preserve">
+    <value>HTML</value>
+    <comment>skills</comment>
+  </data>
+  <data name="htmlFrontendValue" xml:space="preserve">
+    <value>90%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="ismaelLabel" xml:space="preserve">
+    <value>Abrego Web</value>
+  </data>
+  <data name="jmhermanosLabel" xml:space="preserve">
+    <value>Jmhermanos</value>
+    <comment>skills</comment>
+  </data>
+  <data name="joseAlt" xml:space="preserve">
+    <value>José Maria Vazquez</value>
+    <comment>alt</comment>
+  </data>
+  <data name="joseImage" xml:space="preserve">
+    <value>/Images/people/JoseMaria.jpg</value>
+    <comment>image</comment>
+  </data>
+  <data name="josemariaSay" xml:space="preserve">
+    <value>He estudiado con David durante siete años de mi vida. Pienso que él sería un buen as para cualquier empresa en el sector de la informática. Le encanta aprender cosas nuevas contantemente, algo imprescindible en este sector tan cambiante</value>
+    <comment>people</comment>
+  </data>
+  <data name="jqueryFrontend" xml:space="preserve">
+    <value>Jquery</value>
+    <comment>skills</comment>
+  </data>
+  <data name="jqueryFrontendValue" xml:space="preserve">
+    <value>80%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="linkedinAlbertoTilte" xml:space="preserve">
+    <value>Alberto Delgado - Programador</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinAlbertoTitleShort" xml:space="preserve">
+    <value>Alberto's Linkedin</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinAlbertoUrl" xml:space="preserve">
+    <value>https://es.linkedin.com/in/albertodelgadocruzado/en</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinJoseShortTitle" xml:space="preserve">
+    <value>Jose's Linkedin</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinJoseTitle" xml:space="preserve">
+    <value>José Maria Vázquez - Ingeniero de Procesos en Yokogawa</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinJoseUrl" xml:space="preserve">
+    <value>https://nl.linkedin.com/in/josé-maría-vázquez-jiménez-2a887768/en</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinRubenTitle" xml:space="preserve">
+    <value>Rubén Espadas - Analista Programador en Tecnocom</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinRubenTitleShort" xml:space="preserve">
+    <value>Rubén's Linkedin</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinRubenUrl" xml:space="preserve">
+    <value>https://es.linkedin.com/in/rubén-espada-bernal-ab418541/en</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinSagitShortTitle" xml:space="preserve">
+    <value>Sajith's Linkedin</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinSagitTitle" xml:space="preserve">
+    <value>Sajith Mohideen - Ingeniero de Procesos en Fabricom Engie</value>
+    <comment>people</comment>
+  </data>
+  <data name="linkedinSagitUrl" xml:space="preserve">
+    <value>https://uk.linkedin.com/in/sajith-mohideen-b3270b47</value>
+    <comment>url</comment>
+  </data>
+  <data name="mapAlt" xml:space="preserve">
+    <value>¿Donde he estudiado?</value>
+    <comment>alt</comment>
+  </data>
+  <data name="mapCircleImage" xml:space="preserve">
+    <value>/Images/mapCircleTinyEs.png</value>
+    <comment>image</comment>
+  </data>
+  <data name="mapSquareImage" xml:space="preserve">
+    <value>/Images/mapSquareTinyEs.png</value>
+    <comment>image</comment>
+  </data>
+  <data name="mvcBackend" xml:space="preserve">
+    <value>MVC</value>
+    <comment>skills</comment>
+  </data>
+  <data name="mvcBackendValue" xml:space="preserve">
+    <value>80%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="mvcLabel" xml:space="preserve">
+    <value>Gestion Docs</value>
+  </data>
+  <data name="netBackend" xml:space="preserve">
+    <value>VB</value>
+    <comment>skills</comment>
+  </data>
+  <data name="netBackendValue" xml:space="preserve">
+    <value>70%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="pensamientoAlt" xml:space="preserve">
+    <value>David Pensando</value>
+    <comment>alt</comment>
+  </data>
+  <data name="pensamientoImage" xml:space="preserve">
+    <value>/Images/pensamientoTiny.png</value>
+    <comment>image</comment>
+  </data>
+  <data name="peopleHeading" xml:space="preserve">
+    <value>¿Que dicen mis compañeros?</value>
+    <comment>heading</comment>
+  </data>
+  <data name="peopleWhat" xml:space="preserve">
+    <value>&lt;b&gt;¿Qué dicen mis compañeros? -&lt;/b&gt; Mira qué dicen mis compañeros de trabajo sobre mí.</value>
+    <comment>what</comment>
+  </data>
+  <data name="photoshopFrontend" xml:space="preserve">
+    <value>Photoshop</value>
+    <comment>skills</comment>
+  </data>
+  <data name="photoshopFrontendValue" xml:space="preserve">
+    <value>70%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="positionAbengoa" xml:space="preserve">
+    <value>Ingeniero Junior</value>
+    <comment>experience</comment>
+  </data>
+  <data name="positionAvanade" xml:space="preserve">
+    <value>Programador</value>
+    <comment>experience</comment>
+  </data>
+  <data name="positionFreelancer" xml:space="preserve">
+    <value>Programador Freelancer</value>
+    <comment>experience</comment>
+  </data>
+  <data name="positionSabic" xml:space="preserve">
+    <value>Ingeniero en Prácticas</value>
+    <comment>experience</comment>
+  </data>
+  <data name="rubenAlt" xml:space="preserve">
+    <value>Rubén Espadas</value>
+    <comment>alt</comment>
+  </data>
+  <data name="rubenImage" xml:space="preserve">
+    <value>/Images/people/ruben.jpg</value>
+    <comment>image</comment>
+  </data>
+  <data name="rubenSay" xml:space="preserve">
+    <value>David y yo hemos estado trabajando juntos en pequeños proyectos freelance. Aunque al principio él estuviese comenzando  de forma autodidacta, demostró una gran  determinación desarrollando todas las tareas como si de un programador experimentado se tratara</value>
+    <comment>people</comment>
+  </data>
+  <data name="sabic" xml:space="preserve">
+    <value>Sabic</value>
+    <comment>experience</comment>
+  </data>
+  <data name="sabicLabel" xml:space="preserve">
+    <value>Sabic</value>
+    <comment>skills</comment>
+  </data>
+  <data name="sajithAlt" xml:space="preserve">
+    <value>Sajith Mohideen</value>
+    <comment>alt</comment>
+  </data>
+  <data name="sajithImage" xml:space="preserve">
+    <value>/Images/people/Sajit.jpg</value>
+    <comment>image</comment>
+  </data>
+  <data name="sajithSay" xml:space="preserve">
+    <value>Trabaje y compartí piso con David en Holanda. Durante el tiempo que compartí con él pude comprobar lo duro que trabaja y lo gran profesional que es. Su proyecto, el cual era complejo y estaba ajustado de tiempo, lo finalizó en el tiempo previsto y con un alto estándar</value>
+    <comment>people</comment>
+  </data>
+  <data name="sevillaAlt" xml:space="preserve">
+    <value>Universidad Sevilla</value>
+    <comment>alt</comment>
+  </data>
+  <data name="sevillaDate" xml:space="preserve">
+    <value>2006 - 2013</value>
+    <comment>education</comment>
+  </data>
+  <data name="sevillaDescription" xml:space="preserve">
+    <value>Ingeniería Química</value>
+    <comment>education</comment>
+  </data>
+  <data name="sevillaImage" xml:space="preserve">
+    <value>/Images/sevilla.png</value>
+    <comment>image</comment>
+  </data>
+  <data name="sevillaPlace" xml:space="preserve">
+    <value>Sevilla</value>
+    <comment>education</comment>
+  </data>
+  <data name="sevillaUni" xml:space="preserve">
+    <value>Universidad de Sevilla</value>
+    <comment>education</comment>
+  </data>
+  <data name="skillHeading" xml:space="preserve">
+    <value>MIS HABILIDADES</value>
+    <comment>heading</comment>
+  </data>
+  <data name="skillsWhat" xml:space="preserve">
+    <value>&lt;b&gt;Habilidades -&lt;/b&gt; Tengo conocimientos y experiencia en C#, MVC, SQL, etc.</value>
+    <comment>what</comment>
+  </data>
+  <data name="sqlBackend" xml:space="preserve">
+    <value>SQL Server</value>
+    <comment>skills</comment>
+  </data>
+  <data name="sqlBackendValue" xml:space="preserve">
+    <value>70%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="suitCaseIcon" xml:space="preserve">
+    <value>fa fa-suitcase</value>
+    <comment>icon</comment>
+  </data>
+  <data name="supecoLabel" xml:space="preserve">
+    <value>Supeco</value>
+    <comment>skills</comment>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Sobre Mi</value>
+    <comment>title</comment>
+  </data>
+  <data name="usersIcon" xml:space="preserve">
+    <value>fa fa-users</value>
+    <comment>icon</comment>
+  </data>
+  <data name="webBackend" xml:space="preserve">
+    <value>Web Forms</value>
+    <comment>skills</comment>
+  </data>
+  <data name="webBackendValue" xml:space="preserve">
+    <value>70%</value>
+    <comment>skills</comment>
+  </data>
+  <data name="whatAboutHeading" xml:space="preserve">
+    <value>Sobre Mi</value>
+    <comment>heading</comment>
+  </data>
+  <data name="workHeading" xml:space="preserve">
+    <value>EXPERIENCIA</value>
+    <comment>heading</comment>
+  </data>
+</root>

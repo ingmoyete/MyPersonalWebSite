@@ -1,0 +1,12 @@
+﻿@media only screen and (min-width: 1200px) {/* Large Desktop lg*/
+    
+}
+@media only screen and (min-width: 992px) and (max-width : 1200px) {/* Mediun Desktop md */
+    
+}
+@media only screen and (min-width: 768px) and (max-width : 992px) {/* Tablet sm */
+    
+}
+@media only screen and (max-width : 768px) {/* phone xs */
+
+}

@@ -1,0 +1,96 @@
+﻿@model PersonalWebDavid.Models.ContactForm
+
+@{
+    ViewBag.Title = partials.contact.title + partials.layoutRes.titleMainConGuion;
+}
+
+@section scriptsBeforeBundle
+    {
+        @Scripts.Render("~/bundles/contact")
+        <script src="https://www.google.com/recaptcha/api.js?hl=@url.languages.googleLang" async defer></script>
+    }
+
+<!-- Contact =============================== -->
+<section class="sa-registation-form-1" id="contact">
+    <div class="container-fluid">
+        <div class="row sa-section-separator">
+            <!-- End: Section Heading -->
+            <!-- Start: Section Contant -->
+            <div class="sa-registation-form-contant col-xs-12">
+                <div class="row">
+
+                    <div class="title hidden-sm hidden-md hidden-lg">
+                        <h1 class="banger heading">@partials.contact.contactoHeading</h1>
+                    </div>
+
+                    <div class="col-sm-5 col-sm-push-6 col-md-6" id="monitorColumn">
+
+                        <img src="@partials.contact.screenImage" id="monitorImage" alt="@partials.contact.screenAlt" class="img-responsive center-block" />
+                        
+                        <div class="monitorWrapper @ViewBag.googleMessage @ViewBag.successMessage @ViewBag.failMessage">
+                            <a href="#" class="@ViewBag.successMessage email-success socialLink contactMessages"><i class="fa  fa-check-circle"></i>@partials.contact.successMessag</a>
+                            <a href="#" class="@ViewBag.failMessage email-failed socialLink contactMessages"><i class="fa fa-exclamation-circle"></i>@partials.contact.errorMessage</a>
+                            <a href="#" class="@ViewBag.googleMessage email-failed socialLink contactMessages"><i class="fa fa-exclamation-circle"></i>@partials.contact.googleErro</a>
+                            
+                            <a href="@url.url.myFacebook" target="_blank" title="Tweet" onclick="window.open('@url.url.myFacebook'); return false;" class="socialLink" id="facebookScreenLinks">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>@partials.contact.facebookMessage
+                            </a>
+                            <a href="@url.url.myLinkedin" target="_blank" title="Tweet" onclick="window.open('@url.url.myLinkedin'); return false;" class="socialLink" id="linkedinScreenLinks">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>@partials.contact.linkedinMessage
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-sm-pull-5 col-md-6">
+                        <div class="title hidden-xs">
+                            <h1 class="banger heading">@partials.contact.contactoHeading</h1>
+                        </div>
+                        <div class="row">
+                            <!-- Start: Section Heading -->
+                            <div class="title col-xs-12">
+                                <h3>@partials.contact.leaveMessage</h3>
+                            </div>
+                            
+                            <!-- Contact Us Form -->
+                            <form id="contact-us-form" method="post" action="/Home/contactPost" class="sa-form-custom-style">
+                                <div class="col-xs-12">
+                                    <!-- Email -->
+                                    <input name="email" id="contact-us-email" class="form-cus form-control" type="email" placeholder="@partials.contact.email" required="" value="@Model.Email">
+                                    <!-- Name -->
+                                    <input name="subject" id="contact-us-subject" class="form-cus form-control" type="text" placeholder="@partials.contact.subject" required="" value="@Model.Subject">
+                                    <!-- Language -->
+                                    <input type="hidden" name="language" id="language" value="@ViewContext.RouteData.Values["language"].ToString()">                                    
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <textarea id="TextArea" name="TextArea" class="form-control" rows="3" placeholder="@partials.contact.message">@Model.TextArea</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12 text-xs-center">
+                                    <div class="g-recaptcha" data-sitekey="6LfPQyATAAAAAK4ouVIB401hj_jszsqyV-CC_q5A" data-size="big"></div>
+                                </div>
+                                <div class="col-xs-12 buttonsContactForm">
+                                    <div class="btn-form btn-scroll"><a href="javascript:$('#contact-us-form').submit();" class="btn"><i class="fa fa-envelope-o"></i>@partials.contact.buttonSend</a></div>
+                                    <div class="btn-form btn-scroll">
+                                        <input class="btn" id="submitContactFormButton" type="button" name="name" value="Send Message" />
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div> <!-- End: .row -->
+                    </div> <!-- End: .left -->
+
+                </div> <!-- End: .row -->
+            </div> <!-- End: .container -->
+            <!-- End: Section Contant -->
+        </div> <!-- End: .row -->
+    </div> <!-- End: .container -->
+</section> 

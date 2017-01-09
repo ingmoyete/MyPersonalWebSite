@@ -1,0 +1,37 @@
+﻿@model PersonalWebDavid.Models.Cv
+@{
+    ViewBag.Title = @partials.cv.title + partials.layoutRes.titleMainConGuion;
+}
+<section class="projectBackground cv">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-6 col-md-offset-1 col-md-5 col-lg-offset-1">
+
+                <h1 class="banger heading">@partials.cv.headingCv</h1>
+                <p>@partials.cv.text</p>
+                <form id="downloadForm" method="post" action="/Home/davidAlcocer-CV" class="sa-form-custom-style">
+                    <!-- Code -->
+                    <input name="code" id="code" class="form-cus form-control" placeholder="@partials.cv.code" required="" value="@Model.Code">
+                    <input type="hidden" name="forWho" id="forWho" value="@Model.ForWho" />
+                    <input type="hidden" name="language" id="language" value="@ViewContext.RouteData.Values["language"].ToString()">
+                    <div class="btn-form btn-scroll">
+                        <a href="javascript:$('#downloadForm').submit();" id="anchorButton" class="btn"><i class="@partials.layoutRes.downloadIcon"></i>@partials.cv.downloadButton</a>
+                    </div>
+                    <div class="btn-form btn-scroll">
+                        <input class="btn" id="normalButton" type="button" name="name" value="@partials.cv.downloadButton" />
+                    </div>
+                    <p class="@ViewBag.failMessage email-failed"><i class="fa fa-exclamation-circle"></i>@partials.cv.csDownFail<a href="@url.languages.lang/@url.url.contactSection">@partials.cv.askMeLink</a>@partials.cv.askMeForCode</p>
+
+                </form>
+
+            </div>
+
+            <div class="col-sm-6">
+                <img src="@partials.cv.imageCv" id="risa" alt="@partials.cv.imageAlt" class="img-responsive center-block" />
+            </div>
+
+        </div>
+    </div>
+</section>
+

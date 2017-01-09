@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Load Apple icon ================ -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Preloader ================ -->
+    <link href="~/Content/preloader.css" rel="stylesheet" />
+    <!-- Load all Css files ================ -->
+    @Styles.Render("~/bundles/css")
+    <!-- Font Awesome ============================ -->
+    @*<link href="~/Content/font-awesome.min.css" rel="stylesheet" />*@
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <!-- Other Fonts ============================ -->
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+    <!-- Moderniz ============================ -->
+    <script src="~/Scripts/modernizr-2.8.3.min.js"></script>
+    <!-- Head sections for views ============================ -->
+    @if (IsSectionDefined("AddToHead"))
+    {
+        @RenderSection("AddToHead", required: false)
+    }
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here ============================-->
+    <!-- Preloader -->
+    <div id="containerPreloader">
+
+        <div id="sky" class="target animate">
+            <div class="loader">@partials.layoutRes.loading <span class="loadingTitle banger stroke" style="color:orange">@partials.layoutRes.logoName</span>
+            </div>
+
+            <div id="cloud" class="target animate">
+                <div class="cloud cloud-1"></div>
+                <div class="cloud cloud-2"></div>
+                <div class="cloud cloud-3"></div>
+            </div>
+
+            <div id="sun" class="target animate"></div>
+
+            <div id="moon" class="target animate">
+                <div class="moon">
+                </div>
+            </div>
+            <div id="ground" class="target animate"></div>
+
+        </div><!-- #sky -->
+
+
+    </div>
+
+    <div class="site-wrap loading">
+
+        <!-- Mobile navigation ====================================================-->
+        <!-- social and logo Navbar -->
+        <div class="mobileNav centerAbsoluteVertically navbar navbar-fixed-top sa-header-nav-1 sa-nav-fixed navbar-home hidden-lg hidden-md hidden-sm">
+            <!-- Mobile Logo -->
+            <div id="logoMovilBox">
+                <a class="logo" href="@url.languages.lang/@url.url.homeSection">
+                    <p class="logoFirstLine">@partials.layoutRes.logoMobileDavid</p>
+                    <p class="logoSecondLine">@partials.layoutRes.logoMobileAlcocer</p>
+                </a>
+            </div>
+            <!-- Mobile Share text and icon -->
+            <div class="iconBoxShare">
+                <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fjmghermanos.somee.com%2F&text=:%20http%3A%2F%2Fjmghermanos.somee.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+                    <span class="fa-stack pull-right twiter">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjmghermanos.somee.com%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+                    <span class="fa-stack pull-right facebook">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fjmghermanos.somee.com%2F&title=&summary=&source=http%3A%2F%2Fjmghermanos.somee.com%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                    <span class="fa-stack pull-right linkedin">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x"></i>
+                    </span>
+                </a>
+                <span class="pull-right" id="textBoxShare">@partials.layoutRes.shareText</span>
+            </div>
+        </div>
+
+        <!-- Menu items Navbar-->
+        <nav id="body-nav">
+            <ul>
+                <li class="firtElementMenu"><a href="#"></a></li>
+                <li><a class="logoMobile banger stroke" href="@url.languages.lang/@url.url.homeSection">DAVIDALCOCER.COM</a></li>
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "ABOUT" ? "activeMobile" : "")"><a href="@url.languages.lang/@url.url.aboutSection">@partials.layoutRes.aboutMenu</a></li>
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "PROJECTS" ? "activeMobile" : "")"><a href="@url.languages.lang/@url.url.projectsSection">@partials.layoutRes.projectsMenu</a></li>
+                @*<li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "BLOG" ? "activeMobile" : "")"><a href="@url.languages.lang/@url.url.blogSection">@partials.layoutRes.blogMenu</a></li>*@
+                <li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "CONTACT" ? "activeMobile" : "")"><a href="@url.languages.lang/@url.url.contactSection">@partials.layoutRes.contactoMenu</a></li>
+            </ul>
+
+            <a class="flags" href="@HttpContext.Current.Request.Url.AbsoluteUri.Replace("/en/", "/es/")" id="spainFlag">
+                <img src="@partials.layoutRes.spainImage" alt="@partials.layoutRes.spain"/>
+            </a>
+            <a class="flags" href="@HttpContext.Current.Request.Url.AbsoluteUri.Replace("/es/", "/en/")">
+                <img src="@partials.layoutRes.ukImage" alt="@partials.layoutRes.uk" />
+            </a>
+
+        </nav>
+        
+        <!-- Button Navbar -->
+        <a href="#" class="toggle-nav hidden-sm hidden-md hidden-lg">
+            <span class="fa fa-navicon"></span>
+            <span class="fa fa-close"></span>
+        </a>
+        <!-- Desktop-tablet navbar =======================  -->
+        <div class="header-navbar">
+            <!-- Desktop and tablet  -->
+            <nav class="hidden-xs navbar navbar-fixed-top sa-header-nav-1 sa-nav-fixed navbar-home" id="sa-header-nav">
+                <div class="container">
+
+                    <!-- Main Menu List -->
+                    <div class="collapse navbar-collapse" id="sa-navbar-collapse">
+                        <!-- Flag countries -->
+                        <ul class="nav navbar-nav flagNav">
+                            <li>
+                                <a class="flags" href="@HttpContext.Current.Request.Url.AbsoluteUri.Replace("/en/", "/es/")">
+                                    <img src="@partials.layoutRes.spainImage" alt="@partials.layoutRes.spain" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="flags" href="@HttpContext.Current.Request.Url.AbsoluteUri.Replace("/es/", "/en/")">
+                                    <img src="@partials.layoutRes.ukImage" alt="@partials.layoutRes.uk" />
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Logo -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a class="logo" href="@url.languages.lang/@url.url.homeSection">@partials.layoutRes.logoName</a>
+                            </li>
+                        </ul>
+                        <!-- Menu -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "ABOUT" ? "active" : "")"><a href="@url.languages.lang/@url.url.aboutSection">@partials.layoutRes.aboutMenu</a></li>
+                            <li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "PROJECTS" ? "active" : "")"><a href="@url.languages.lang/@url.url.projectsSection">@partials.layoutRes.projectsMenu</a></li>
+                            @*<li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "BLOG" ? "active" : "")"><a href="@url.languages.lang/@url.url.blogSection">@partials.layoutRes.blogMenu</a></li>*@
+                            <li class="@(ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "CONTACT" ? "active" : "")"><a href="@url.languages.lang/@url.url.contactSection">@partials.layoutRes.contactoMenu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Scroll message =======================  -->
+        <div class="scrollWrapper">
+            <h5>@url.languages.contraryChangeLanguage <a href="@HttpContext.Current.Request.Url.AbsoluteUri.Replace(url.languages.lang, url.languages.contraryLang)"><span class="@url.languages.contratyFlag"></span> @url.languages.contraryName</a></h5>
+        </div>
+        <!-- Button up =======================  -->
+        @if (ViewContext.RouteData.Values["Action"].ToString().ToUpper() == "ABOUT")
+        {
+            <div class="scrollUpButton btn-form btn-scroll">
+                <a href="#@url.url.whatAbout" class="btn"><i class="fa fa-arrow-up"></i></a>
+                <p>@partials.layoutRes.goUpButton</p>
+            </div>
+        }
+
+        <!-- Site wrapper ================================================-->
+        <div class="push-wrap">
+            <header class="sa-header-1" id="header">
+                <div class="overlay-color">
+                    @RenderBody()
+                </div>
+            </header>
+        </div>
+
+        <!--Share - Social icons ====================================================================-->
+        <ul class="socialIcons hidden-xs">
+            <li>
+                <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fjmghermanos.somee.com%2F&text=:%20http%3A%2F%2Fjmghermanos.somee.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+                    <span class="fa-stack pull-right twiter">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjmghermanos.somee.com%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+                    <span class="fa-stack pull-right facebook">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x"></i>
+                    </span>
+                </a>
+
+            </li>
+
+            <li>
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fjmghermanos.somee.com%2F&title=&summary=&source=http%3A%2F%2Fjmghermanos.somee.com%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+                    <span class="fa-stack pull-right linkedin">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fa fa-linkedin fa-stack-1x"></i>
+                    </span>
+                </a>
+            </li>
+
+        </ul>
+        <!-- Footer ============================================================== -->
+        <section class="sa-features-10">
+            <div class="container">
+                <!-- Icons -->
+                <div class="row sa-section-separator graySeparator">
+
+                    <h2 class="footerTitle text-center"><span class="stroke banger footerDavidAlcocer" style="color:orange; font-size: 1.2em;">@partials.layoutRes.logoFooter</span> @partials.layoutRes.pageInfo</h2>
+
+                    <!-- End: Section Heading -->
+                    <!-- Start: Section Contant -->
+                    <div class="features-content col-xs-12">
+                        <div class="largeIconsFooter features-content-body">
+                            <div class="col-sm-3 col-xs-6 each-features">
+                                <a href="@url.url.myFacebook" target="_blank">
+                                    <div class="each-features-body">
+                                        <i class="icon @partials.layoutRes.facebookIcon"></i>
+                                        <span class="title">@partials.layoutRes.addFooter</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 each-features">
+                                <a href="@url.url.myLinkedin" target="_blank">
+                                    <div class="each-features-body">
+                                        <i class="icon @partials.layoutRes.linkedinIcon"></i>
+                                        <span class="title">@partials.layoutRes.connectFooter</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 each-features">
+                                <a href="@url.languages.lang/@url.url.contactSection">
+                                    <div class="each-features-body">
+                                        <i class="icon @partials.layoutRes.phoneIcon"></i>
+                                        <span class="title">@partials.layoutRes.contactFooter</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-3 col-xs-6 each-features">
+                                <a href="@url.languages.lang/@url.url.cvPage">
+                                    <div class="each-features-body">
+                                        <i class="icon @partials.layoutRes.downloadIcon"></i>
+                                        <span class="title">@partials.layoutRes.downloadFooter</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End: Section Contant -->
+                </div> <!-- End: .row -->
+                <!-- Site map -->
+                <div class="row sa-section-separator sa-site-map">
+                    <div class="features-content col-xs-12">
+                        <div class="features-content-body">
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-md-offset-1 each-features">
+                                <div class="each-features-body imageFooterContainer">
+                                    <a href="@url.languages.lang/@url.url.homeSection"><img src="@partials.layoutRes.footerImage" class="img-responsive" alt="@partials.layoutRes.footerImageAlt" /></a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-2 each-features">
+                                <div class="each-features-body">
+                                    <ul class="siteMap">
+                                        <li class="firstLevel"><a href="@url.languages.lang/@url.url.aboutSection">@partials.layoutRes.aboutMenu</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.aboutSection/#@url.url.skillsId">@partials.layoutRes.skills</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.aboutSection/#@url.url.experienceId">@partials.layoutRes.experience</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.aboutSection/#@url.url.educationId">@partials.layoutRes.education</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.aboutSection/#@url.url.peopleId">@partials.layoutRes.peopleSay</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-3 col-md-2 each-features">
+                                <div class="each-features-body">
+                                    <ul class="siteMap">
+                                        <li class="firstLevel"><a href="@url.languages.lang/@url.url.projectsSection">@partials.layoutRes.projectsMenu</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2">@partials.layoutRes.avalibrary</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2">@partials.layoutRes.supeco</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2">@partials.layoutRes.sabic</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2">@partials.layoutRes.abengoa</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2">@partials.layoutRes.jmhermanos</a></li>
+                                        <li class="secondLevel"><a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2">@partials.layoutRes.mercedes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                  
+                            <div class="col-xs-12 col-sm-3 col-md-2 each-features">
+                                <div class="each-features-body">
+                                    <ul class="siteMap">
+                                        <li class="firstLevel"><a href="@url.languages.lang/@url.url.contactSection">@partials.layoutRes.compartir</a></li>
+                                        <li class="secondLevel"><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fjmghermanos.somee.com%2F&text=:%20http%3A%2F%2Fjmghermanos.somee.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">@partials.layoutRes.twiter</a></li>
+                                        <li class="secondLevel"><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fjmghermanos.somee.com%2F&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">@partials.layoutRes.facebook</a></li>
+                                        <li class="secondLevel"><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fjmghermanos.somee.com%2F&title=&summary=&source=http%3A%2F%2Fjmghermanos.somee.com%2F" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">@partials.layoutRes.linkedin</a></li>
+                                        <li class="secondLevel"><a href="https://plus.google.com/share?url=http%3A%2F%2Fjmghermanos.somee.com%2F" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;">@partials.layoutRes.google</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End: Section Contant -->
+                </div>
+            </div> <!-- End: .container -->
+        </section> <!-- End: section -->
+    </div>
+    <!-- Scripts bottom ======================================================== -->
+    <!-- Jquery async -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/scripts/jquery-1.12.0.min.js"><\/script>')</script>
+    <!-- Other scripts -->
+    @RenderSection("scriptsBeforeBundle", required: false)
+    @Scripts.Render("~/bundles/javascript")
+    @RenderSection("scriptsAfterBundle", required: false)
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-78521171-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    @* Fallback for safari browser *@
+    <script>
+        if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+            $('body').toggleClass('isSafari');
+        }
+    </script>
+
+</body>
+</html>

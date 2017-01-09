@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = partials.projects.title + partials.layoutRes.titleMainConGuion;
+}
+<section class="projectBackground">
+  <div class="row">
+
+      <div class="col-sm-6 col-sm-push-6">
+          <h1 class="banger heading stroke"><span class="fa fa-quote-left"></span>@partials.projects.projectSays<span class="fa fa-quote-right"></span></h1>    
+      </div>
+
+      <div class="col-sm-6 col-sm-pull-6">
+          <img src="@partials.projects.risaImage" id="risa" alt="@partials.projects.risaAlt" class="img-responsive center-block"/>
+      </div>
+
+  </div>  
+</section>
+
+<section class="sa-features-1 projects" id="@url.url.projectsThumb">
+    <div class="container">
+        <div class="row">
+            <!-- Image portfolio -->
+            <div class="text-center sa-features-portfolio col-xs-12 col-sm-12 col-md-10 col-md-offset-1 col-lg-12 col-lg-offset-0">
+
+                <h1 class="banger heading text-center">@partials.projects.projectHeading</h1>
+
+                <!-- 1 -->
+                <div class="col-xs-6 col-sm-4 col-lg-3">
+                    <div class="projectCaption center-block">
+                        <img src="@partials.projects.sabicSmall" alt="@partials.projects.sabicAlt" class="img-responsive center-block thumbnailWhiteBackground" />
+                        <h6>@partials.projects.sabicThumb</h6>
+                        <a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2" class="btn">@partials.projects.moreButton<span class="fa fa-long-arrow-right"></span></a>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="col-xs-6 col-sm-4 col-lg-3">
+                    <div class="projectCaption center-block">
+                        <img src="@partials.projects.supecoSmall" alt="@partials.projects.supecoAlt" class="img-responsive center-block thumbnailWhiteBackground" />
+                        <h6>@partials.projects.supecoThumb</h6>
+                        <a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2" class="btn">@partials.projects.moreButton<span class="fa fa-long-arrow-right"></span></a>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-xs-6 col-sm-4 col-lg-3">
+                    <div class="projectCaption center-block">
+                        <img src="@partials.projects.mercedesSmall" alt="@partials.projects.mercedesAlt" class="img-responsive center-block thumbnailWhiteBackground" />
+                        <h6>@partials.projects.mercedesThumb</h6>
+                        <a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2" class="btn">@partials.projects.moreButton<span class="fa fa-long-arrow-right"></span></a>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="col-xs-6 col-sm-4 col-lg-3">
+                    <div class="projectCaption center-block">
+                        <img src="@partials.projects.jmhermanosSmall" alt="@partials.projects.jmhermanosAlt" class="img-responsive center-block thumbnailWhiteBackground" />
+                        <h6>@partials.projects.jmhermanosThumb</h6>
+                        <a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2" class="btn">@partials.projects.moreButton<span class="fa fa-long-arrow-right"></span></a>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="col-xs-6 col-sm-4 col-lg-3 col-lg-offset-3">
+                    <div class="projectCaption center-block">
+                        <img src="@partials.projects.avalibrarySmall" alt="@partials.projects.avalibraryAlt" class="img-responsive center-block thumbnailWhiteBackground" />
+                        <h6>@partials.projects.avalibraryThumb</h6>
+                        <a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2" class="btn">@partials.projects.moreButton<span class="fa fa-long-arrow-right"></span></a>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="col-xs-6 col-sm-4 col-lg-3">
+                    <div class="projectCaption center-block">
+                        <img src="@partials.projects.abengoaSmall" alt="@partials.projects.abengoaAlt" class="img-responsive center-block thumbnailWhiteBackground" />
+                        <h6>@partials.projects.abengoaThumb</h6>
+                        <a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2" class="btn">@partials.projects.moreButton<span class="fa fa-long-arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- End: .container -->
+</section>

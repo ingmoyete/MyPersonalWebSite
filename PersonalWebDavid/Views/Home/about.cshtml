@@ -1,0 +1,599 @@
+﻿@{
+    ViewBag.Title = partials.about.title + partials.layoutRes.titleMainConGuion;
+}
+@section scriptsAfterBundle{
+    @Scripts.Render("~/bundles/peopleSlider")
+}
+
+<!-- About/CV =========================================================== -->
+<section class="whatAbout sa-features-1 whiteBackground about" id="@url.url.whatAbout">
+    <div class="container">
+        <div class="row">
+            <!-- Title  XS-->
+            <div class="hidden-sm hidden-md hidden-lg sa-section-header with-sub-section-heading">
+                <h1 class="banger heading">@partials.about.whatAboutHeading</h1>
+            </div>
+
+            <!-- Image -->
+            <div class="col-xs-12 col-sm-5">
+                <img src="@partials.about.pensamientoImage" id="pensamiento" alt="@partials.about.pensamientoAlt" class="img-responsive center-block" />
+            </div>
+
+            <!-- Texts -->
+            <div class="sa-features-text col-xs-12 col-sm-7">
+
+                <!-- Title SM, MD, LG -->
+                <div class="hidden-xs sa-section-header with-sub-section-heading">
+                    <h1 class="banger heading">@partials.about.whatAboutHeading</h1>
+                </div>
+
+                <div class="ulCenter">
+                <p>@partials.about.descriptionWhat</p>
+                    <ul class="fa-ul">
+                        <li><a href="#@url.url.skillsId"><i class="fa-li @partials.about.codeIcon" aria-hidden="true"></i>@Html.Raw(partials.about.skillsWhat)</a></li>
+                        <li><a href="#@url.url.experienceId"><i class="fa-li @partials.about.suitCaseIcon" aria-hidden="true"></i>@Html.Raw(partials.about.experienceWhat)</a></li>
+                        <li><a href="#@url.url.educationId"><i class="fa-li @partials.about.hatIcon" aria-hidden="true"></i>@Html.Raw(partials.about.educationWhat)</a></li>
+                        <li><a href="#@url.url.peopleId"><i class="fa-li @partials.about.usersIcon" aria-hidden="true"></i>@Html.Raw(partials.about.peopleWhat)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Buttons -->
+                <div class="btn-form btn-scroll">
+                    <a href = "@url.languages.lang/@url.url.contactSection" class="btn"><i class="fa fa-envelope-o"></i>@partials.about.contactButton</a>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- End: .container -->
+</section> <!-- End: section -->
+<!-- About/CV end -->
+<!-- Skills ============================================================================================= -->
+<section class="sa-features grayBackground" id="@url.url.skillsId">
+    <div class="container">
+        <div class="row sa-section-separator sa-features-3">
+
+            <!-- Start: Section Heading -->
+            <div class="sa-section-header with-sub-section-heading col-xs-12">
+
+                <span class="sub-section-heading @partials.about.codeIcon"></span>
+                <h1 class="banger heading">@partials.about.skillHeading</h1>
+            </div>
+            <!-- End: Section Heading -->
+            <!-- Start: Section Contant -->
+            <div class="sa-features-contant-1 col-xs-12">
+                <div class="row">
+
+                    <div class="each-features col-sm-6 col-xs-12">
+                        <div class="each-features-body">
+                            <div class="sa-skill-detail-1">
+
+                                <h3 class="title">@partials.about.headingFrontend</h3>
+
+                                <h4 class="subject">@partials.about.htmlFrontend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.htmlFrontendValue"><div class="progress-bar" style="width: @partials.about.htmlFrontendValue"><span class="sr-only">@partials.about.htmlFrontendValue</span><span class="process-end" style="left: @partials.about.htmlFrontendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael --><a href="@url.url.ismaelUrl" target="_blank"><span class="label label-danger">@partials.about.ismaelLabel</span></a>
+                                        <!-- mvclabel --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                        <!-- jmhermanos --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.htmlFrontendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.cssFrontend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.cssFrontendValue"><div class="progress-bar" style="width: @partials.about.cssFrontendValue"><span class="sr-only">@partials.about.cssFrontendValue</span><span class="process-end" style="left: @partials.about.cssFrontendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- jmhermanos --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>
+                                        <!-- mvclabel --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>
+                                        <!-- daimler --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>
+                                        <!-- ismael --><a href="@url.url.ismaelUrl" target="_blank"><span class="label label-danger">@partials.about.ismaelLabel</span></a>
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.cssFrontendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.jqueryFrontend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.jqueryFrontendValue"><div class="progress-bar" style="width: @partials.about.jqueryFrontendValue"><span class="sr-only">@partials.about.jqueryFrontendValue</span><span class="process-end" style="left: @partials.about.jqueryFrontendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- ismael -->@*<a href="@url.url.ismaelUrl" target="_blank"><span class="label label-danger">@partials.about.ismaelLabel</span></a>*@
+                                        <!-- daimler --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>
+                                        <!-- jmhermanos --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>
+                                        <!-- mvclabel --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.jqueryFrontendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.bootstrapFrontend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.bootstrapFrontendValue"><div class="progress-bar" style="width: @partials.about.bootstrapFrontendValue"><span class="sr-only">@partials.about.bootstrapFrontendValue</span><span class="process-end" style="left: @partials.about.bootstrapFrontendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael -->@*<a href="@url.url.ismaelUrl" target="_blank"><span class="label label-danger">@partials.about.ismaelLabel</span></a>*@
+                                        <!-- mvclabel --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                        <!-- jmhermanos --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.bootstrapFrontendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.photoshopFrontend</h4>
+                                <div class="col-xs-9">
+                                    <div class="row progress" data-progress="@partials.about.photoshopFrontendValue"><div class="progress-bar" style="width: @partials.about.photoshopFrontendValue"><span class="sr-only">@partials.about.photoshopFrontendValue</span><span class="process-end" style="left: @partials.about.photoshopFrontendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael --><a href="@url.url.ismaelUrl" target="_blank"><span class="label label-danger">@partials.about.ismaelLabel</span></a>
+                                        <!-- mvclabel -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>*@
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                        <!-- jmhermanos --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.photoshopFrontendValue</div>
+                                <div class="clearfix"></div>
+
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+
+                    <div class="each-features col-sm-6 col-xs-12">
+                        <div class="each-features-body">
+
+                            <div class="sa-skill-detail-1">
+                                <h3 class="title">@partials.about.headingBackend</h3>
+                                <h4 class="subject">@partials.about.csharpBackend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.csharpBackendValue"><div class="progress-bar" style="width: @partials.about.csharpBackendValue"><span class="sr-only">@partials.about.csharpBackendValue</span><span class="process-end" style="left: @partials.about.csharpBackendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>
+                                        <!-- supeco --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael -->@*<a href="@url.url.ismaelUrl"><span class="label label-danger">@partials.about.ismaelLabel</span></a>*@
+                                        <!-- mvclabel --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                        <!-- jmhermanos --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.csharpBackendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.mvcBackend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.mvcBackendValue"><div class="progress-bar" style="width: @partials.about.mvcBackendValue"><span class="sr-only">@partials.about.mvcBackendValue</span><span class="process-end" style="left: @partials.about.mvcBackendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael -->@*<a href="@url.url.ismaelUrl"><span class="label label-danger">@partials.about.ismaelLabel</span></a>*@
+                                        <!-- mvclabel --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                        <!-- jmhermanos --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.mvcBackendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.webBackend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.webBackendValue"><div class="progress-bar" style="width: @partials.about.webBackendValue"><span class="sr-only">@partials.about.webBackendValue</span><span class="process-end" style="left: @partials.about.webBackendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael --><a href="@url.url.ismaelUrl" target="_blank"><span class="label label-danger">@partials.about.ismaelLabel</span></a>
+                                        <!-- mvclabel -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>*@
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                        <!-- jmhermanos -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>*@
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.webBackendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.netBackend</h4>
+                                <div class="col-xs-9 graySeparator">
+                                    <div class="row progress" data-progress="@partials.about.netBackendValue"><div class="progress-bar" style="width: @partials.about.netBackendValue"><span class="sr-only">@partials.about.netBackendValue</span><span class="process-end" style="left: @partials.about.netBackendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>*@
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael -->@*<a href="@url.url.ismaelUrl"><span class="label label-danger">@partials.about.ismaelLabel</span></a>*@
+                                        <!-- mvclabel -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>*@
+                                        <!-- abengoa --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>
+                                        <!-- jmhermanos -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>*@
+
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.netBackendValue</div>
+                                <div class="clearfix"></div>
+
+                                <h4 class="subject">@partials.about.sqlBackend</h4>
+                                <div class="col-xs-9">
+                                    <div class="row progress" data-progress="@partials.about.sqlBackendValue"><div class="progress-bar" style="width: @partials.about.sqlBackendValue"><span class="sr-only">@partials.about.sqlBackendValue</span><span class="process-end" style="left: @partials.about.sqlBackendValue"></span></div></div>
+                                    <div class="labelContainer">
+                                        <!-- sabic -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.sabicSection2"><span class="label label-default">@partials.about.sabicLabel</span></a>*@
+                                        <!-- supeco --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.supecoSection2"><span class="label label-primary">@partials.about.supecoLabel</span></a>
+                                        <!-- daimler -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.mercedesSection2"><span class="label label-warning">@partials.about.daimlerLabel</span></a>*@
+                                        <!-- ismael -->@*<a href="@url.url.ismaelUrl"><span class="label label-danger">@partials.about.ismaelLabel</span></a>*@
+                                        <!-- mvclabel --><a href="@url.languages.lang/@url.url.projectsSection/@url.url.avalibrarySection2"><span class="label label-success">@partials.about.mvcLabel</span></a>
+                                        <!-- abengoa -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.abengoaSection2"><span class="label label-info">@partials.about.abengoaLabel</span></a>*@
+                                        <!-- jmhermanos -->@*<a href="@url.languages.lang/@url.url.projectsSection/@url.url.jmhermanosSection2"><span class="label label-danger" style="background-color: darkcyan;">@partials.about.jmhermanosLabel</span></a>*@
+                                    </div>
+                                </div>
+                                <div class="col-xs-3 skill-view">@partials.about.sqlBackendValue</div>
+                                <div class="clearfix"></div>
+
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                </div>
+            </div>
+            <!-- End: Section Contant -->
+        </div> <!-- End: .row -->
+    </div> <!-- End: .container -->
+</section> <!-- End: section -->
+<!-- Skills end -->
+<!-- Work ============================================================================================= -->
+<section class="workExperience sa-features whiteBackground" id="@url.url.experienceId">
+    <div class="container">
+        <div class="row sa-section-separator sa-features-4">
+
+            <!-- Start: Section Heading -->
+            <div class="sa-section-header with-sub-section-heading col-xs-12">
+
+                <span class="sub-section-heading @partials.about.suitCaseIcon"></span>
+                <h1 class="banger heading">@partials.about.workHeading</h1>
+            </div>
+            <!-- End: Section Heading -->
+            <!-- Start: Section Contant -->
+            <div class="sa-features-contant-1 each-hover col-xs-12">
+                <div class="row">
+
+                    <div class="each-features col-lg-3 col-sm-6 col-xs-12">
+                        <div class="each-features-body">
+                            <div class="description-info">
+                                <h3 class="title">@partials.about.positionAvanade</h3>
+                                <span class="date">@partials.about.dateAvanade</span>
+                                <p class="detail">@partials.about.descriptionAvanade</p>
+                                <a href="@url.url.avanadeUrl" target="_blank" class="sub-link">@partials.about.avanade</a>
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                    <div class="each-features col-lg-3 col-sm-6 col-xs-12">
+                        <div class="each-features-body">
+                            <div class="description-info">
+                                <h3 class="title">@partials.about.positionFreelancer</h3>
+                                <span class="date">@partials.about.dateFreelancer</span>
+                                <p class="detail">@partials.about.descriptionFreelancer</p>
+                                <a href="@url.url.jmhermanosUrl" target="_blank" class="sub-link">@partials.about.freelancerJmHermanos, </a>
+                                <a href="@url.url.ismaelUrl" target="_blank" class="sub-link">@partials.about.freelancerIsmael</a>
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                    <div class="each-features col-lg-3 col-sm-6 col-xs-12">
+                        <div class="each-features-body">
+                            <div class="description-info">
+                                <h3 class="title">@partials.about.positionAbengoa</h3>
+                                <span class="date">@partials.about.dateAbengoa</span>
+                                <p class="detail">@partials.about.descriptionAbengoa</p>
+                                <a href="@url.url.abengoaUrl" target="_blank" class="sub-link">@partials.about.abengoa</a>
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                    <div class="each-features col-lg-3 col-sm-6 col-xs-12">
+                        <div class="each-features-body">
+                            <div class="description-info">
+                                <h3 class="title">@partials.about.positionSabic</h3>
+                                <span class="date">@partials.about.dateSabic</span>
+                                <p class="detail">@partials.about.descriptionSabic</p>
+                                <a href="@url.url.sabicUrl" target="_blank" class="sub-link">@partials.about.sabic</a>
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                </div>
+            </div>
+            <!-- End: Section Contant -->
+        </div> <!-- End: .row -->
+    </div> <!-- End: .container -->
+</section> <!-- End: section -->
+<!-- Work end -->
+<!-- Education ============================================================================================= -->
+<section class="education sa-features-6 grayBackground" id="@url.url.educationId">
+    <div class="container">
+        <div class="row sa-section-separator">
+            <!-- Start: Section Heading -->
+            <div class="mapHeading sa-section-header with-sub-section-heading col-xs-12">
+                <span class="sub-section-heading @partials.about.hatIcon"></span>
+                <h1 class="banger heading">@partials.about.educationHeading</h1>
+            </div>
+            <!-- End: Section Heading -->
+            <!-- Start: Section Contant -->
+            <div class="sa-features-contant-1 col-xs-12">
+                <!-- Small screen XS, SM, MD -->
+                <div class="row hidden-lg">
+
+                    <!-- Map -->
+                    <div class="mapContainer each-features col-sm-5">
+                        <img src="@partials.about.mapSquareImage" class="hidden-xs hidden-lg img-responsive mapSquare" alt="@partials.about.mapAlt" />
+                        <img src="@partials.about.mapCircleImage" class="hidden-md hidden-sm img-responsive mapCircle" alt="@partials.about.mapAlt" />
+                    </div>
+                    <!-- Next to map -->
+                    <div class="col-sm-7 nextToImage">
+
+                        <!-- First Item ========================================== -->
+                        <div class="each-features col-sm-6">
+                            <div class="each-features-body strongGray">
+                                <div class="logo-with-title">
+                                    <div class="logoEducationBox">
+                                        <img src="@partials.about.aaltoImage" alt="@partials.about.aaltoAlt" />
+                                    </div>
+                                    <h3 class="title">@partials.about.aaltoUni</h3>
+                                    <p class="detail">
+                                        @partials.about.aaltoDescription<br />
+                                        @partials.about.aaltoDate<br />
+                                        @partials.about.aaltoPlace
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second Item ========================================== -->
+                        <div class="each-features col-sm-6">
+                            <div class="each-features-body lightBlue">
+                                <div class="logo-with-title">
+                                    <div class="logoEducationBox">
+                                        <img src="@partials.about.delfinImage" class="logoStudies" alt="@partials.about.delfinAlt" />
+                                    </div>
+                                    <h3 class="title">@partials.about.delfinUni</h3>
+                                    <p class="detail">
+                                        @partials.about.delfinDescription<br />
+                                        @partials.about.delfinDate<br />
+                                        @partials.about.delfinPlace
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- End Next to map -->
+
+                    <div class="clearfix"></div>
+
+                    <div class="each-features col-sm-5 equalize">
+                        <div class="each-features-body strongBlue addMarginsToEducationBoxes">
+                            <div class="logo-with-title">
+                                <div class="logoEducationBox">
+                                    <img src="@partials.about.canariasImage" alt="@partials.about.canariasAlt" />
+                                </div>
+                                <h3 class="title">@partials.about.canariasUni</h3>
+                                <p class="detail">
+                                    @partials.about.canariasDescription<br />
+                                    @partials.about.canariasDate<br />
+                                    @partials.about.canariasPlace
+                                </p>
+
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+
+
+                    <div class="col-sm-7 col-lg-8">
+                        <div class="each-features col-sm-12">
+                            <div class="each-features-body pink addMarginsToEducationBoxes">
+                                <div class="logo-with-title">
+                                    <div class="logoEducationBox">
+                                        <img src="@partials.about.sevillaImage" class="logoStudies" alt="@partials.about.sevillaAlt" />
+                                    </div>
+                                    <h3 class="title">@partials.about.sevillaUni</h3>
+                                    <p class="detail">
+                                        @partials.about.sevillaDescription<br />
+                                        @partials.about.sevillaDate<br />
+                                        @partials.about.sevillaPlace
+                                    </p>
+
+                                </div>
+                            </div>
+                        </div> <!-- End: .each-item -->
+
+                    </div>
+                    <!-- End Second Row -->
+                </div>
+
+                <!-- Large screen LG -->
+                <div class="largeScreenEducation row hidden-xs hidden-sm hidden-md">
+
+                    <!-- First Row -->
+                    <div class="mapContainer each-features col-lg-4">
+                        <img src="@partials.about.mapCircleImage" class="hidden-md hidden-sm img-responsive mapCircle" alt="@partials.about.mapAlt" />
+                    </div>
+                        
+                    <div class="each-features col-lg-2">
+                        <div class="each-features-body strongGray">
+                            <div class="logo-with-title">
+                                <div class="logoEducationBox">
+                                    <img src="@partials.about.aaltoImage" alt="@partials.about.aaltoAlt" />
+                                </div>
+                                <h3 class="title">@partials.about.aaltoUni</h3>
+                                <p class="detail">
+                                    @partials.about.aaltoDescription<br />
+                                    @partials.about.aaltoDate<br />
+                                    @partials.about.aaltoPlace
+                                </p>
+
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                    <!-- Second Row -->
+                    <div class="delfin each-features col-lg-2">
+                        <div class="each-features-body lightBlue addMarginsToEducationBoxes">
+                            <div class="logo-with-title">
+                                <div class="logoEducationBox">
+                                    <img src="@partials.about.delfinImage" class="logoStudies" alt="@partials.about.delfinAlt" />
+                                </div>
+                                <h3 class="title">@partials.about.delfinUni</h3>
+                                <p class="detail">
+                                    @partials.about.delfinDescription<br />
+                                    @partials.about.delfinDate<br />
+                                    @partials.about.delfinPlace
+                                </p>
+
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+
+                    <div class="each-features col-lg-2">
+                        <div class="each-features-body strongBlue">
+                            <div class="logo-with-title">
+                                <div class="logoEducationBox">
+                                    <img src="@partials.about.canariasImage" alt="@partials.about.canariasAlt" />
+                                </div>
+                                <h3 class="title">@partials.about.canariasUni</h3>
+                                <p class="detail">
+                                    @partials.about.canariasDescription<br />
+                                    @partials.about.canariasDate<br />
+                                    @partials.about.canariasPlace
+                                </p>
+
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                    <!-- End First Row -->
+
+
+                    <div class="each-features col-lg-2">
+                        <div class="each-features-body pink addMarginsToEducationBoxes">
+                            <div class="logo-with-title">
+                                <div class="logoEducationBox">
+                                    <img src="@partials.about.sevillaImage" class="logoStudies" alt="@partials.about.sevillaAlt" />
+                                </div>
+                                <h3 class="title">@partials.about.sevillaUni</h3>
+                                <p class="detail">
+                                    @partials.about.sevillaDescription<br />
+                                    @partials.about.sevillaDate<br />
+                                    @partials.about.sevillaPlace
+                                </p>
+
+                            </div>
+                        </div>
+                    </div> <!-- End: .each-item -->
+                    <!-- End Second Row -->
+                </div>            
+            </div>
+            <!-- End: Section Contant -->
+        </div> <!-- End: .row -->
+    </div> <!-- End: .container -->
+</section> <!-- End: section -->
+<!-- Education end -->
+<!-- People ========================================================================================== -->
+<section class="people sa-features-12 whiteBackground" id="@url.url.peopleId">
+    <div class="container">
+        <div class="row sa-section-separator">
+
+            <!-- Start: Section Heading -->
+            <div class="peopleSayHeading sa-section-header with-sub-section-heading col-xs-12">
+                <span class="sub-section-heading @partials.about.usersIcon"></span>
+                <h1 class="banger heading">@partials.about.peopleHeading</h1>
+            </div>
+            <!-- End: Section Heading -->
+            <!-- First element -->
+            <div class="peopleItem col-xs-12 graySeparator">
+                <div class="row item">
+                    <div class="peopleImage col-sm-4">
+                        <img src="@partials.about.joseImage" class="img-circle img-responsive center-block" alt="@partials.about.joseAlt" />
+                        <a href="@partials.about.linkedinJoseUrl" target="_blank" class="hidden-sm hidden-md hidden-lg"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinJoseTitle</p></a>
+                        <a href="@partials.about.linkedinJoseUrl" target="_blank" class="hidden-xs"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinJoseShortTitle</p></a>
+                    </div>
+                    <div class="item-content col-sm-8">
+                        <div class="item-content-body">
+                            <blockquote class="detail"><span class="fa fa-quote-left"></span>@partials.about.josemariaSay<span class="fa fa-quote-right"></span></blockquote>
+                            <h4 class="name hidden-xs">@partials.about.linkedinJoseTitle</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Second element (pull and push) -->
+            <div class="peopleItem col-xs-12 graySeparator">
+                <div class="row item">
+                    <div class="col-sm-4 peopleImage">
+                        <img src="@partials.about.rubenImage" class="img-circle img-responsive center-block" alt="@partials.about.rubenAlt" />
+                        <a href="@partials.about.linkedinRubenUrl" target="_blank" class="hidden-sm hidden-md hidden-lg"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinRubenTitle</p></a>
+                        <a href="@partials.about.linkedinRubenUrl" target="_blank" class="hidden-xs"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinRubenTitleShort</p></a>
+                    </div>
+                    <div class="item-content col-sm-8">
+                        <div class="item-content-body">
+                            <blockquote class="detail"><span class="fa fa-quote-left"></span>@partials.about.rubenSay<span class="fa fa-quote-right"></span></blockquote>
+                            <h4 class="name hidden-xs">@partials.about.linkedinRubenTitle</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Third element -->
+            <div class="peopleItem col-xs-12 graySeparator">
+                <div class="row item">
+                    <div class="col-sm-4 peopleImage">
+                        <img src="@partials.about.sajithImage" class="img-circle img-responsive center-block" alt="@partials.about.sajithAlt" />
+                        <a href="@partials.about.linkedinSagitUrl" target="_blank" class="hidden-sm hidden-md hidden-lg"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinSagitTitle</p></a>
+                        <a href="@partials.about.linkedinSagitUrl" target="_blank" class="hidden-xs"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinSagitShortTitle</p></a>
+                    </div>
+                    <div class="item-content col-sm-8">
+                        <div class="item-content-body">
+                            <blockquote class="detail"><span class="fa fa-quote-left"></span>@partials.about.sajithSay<span class="fa fa-quote-right"></span></blockquote>
+                            <h4 class="name hidden-xs">@partials.about.linkedinSagitTitle</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fourth element (pull and push) -->
+            <div class="peopleItem col-xs-12">
+                <div class="row item">
+                    <div class="col-sm-4 peopleImage">
+                        <img src="@partials.about.albertoImage" class="img-circle img-responsive center-block" alt="@partials.about.albertoAlt" />
+                        <a href="@partials.about.linkedinAlbertoUrl" target="_blank" class="hidden-sm hidden-md hidden-lg"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinAlbertoTilte</p></a>
+                        <a href="@partials.about.linkedinAlbertoUrl" target="_blank" class="hidden-xs"><p class="anchorLinkedin"><span class="fa fa-linkedin-square about"></span>@partials.about.linkedinAlbertoTitleShort</p></a>
+                    </div>
+                    <div class="item-content col-sm-8">
+                        <div class="item-content-body">
+                            <blockquote class="detail"><span class="fa fa-quote-left"></span>@partials.about.albertoSay<span class="fa fa-quote-right"></span></blockquote>
+                            <h4 class="name hidden-xs">@partials.about.linkedinAlbertoTilte</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider navigation -->
+            <div class="col-xs-12 col-sm-8 col-sm-offset-4 sliderButtons sa-features-1 whiteBackground" id="sliderMenu">
+                <div class="btn-form btn-scroll">
+                    <a class="btn" id="previousPeopleSlider"><i class="fa fa-chevron-left"></i></a>
+                    <a class="btn" id="nextPeopleSlider"><i class="fa fa-chevron-right"></i></a>
+                    <a class="btn" id="view"><i class="fa fa-eye"></i>View All</a>
+                </div>
+            </div>
+
+            <!-- End: Section Contant -->
+        </div> <!-- End: .row -->
+    </div> <!-- End: .container -->
+</section> <!-- End: section -->
+<!-- End People ========================================================================================== -->

@@ -1,0 +1,75 @@
+﻿/*Purple:#5b71bd  */
+/*Green: #8fc461 */
+.green{
+    color:#8fc461 !important;
+}
+.purple{
+    color:#5b71bd !important;
+}
+.grayBackground{
+    background-color:#f5f5f5!important;
+}
+.whiteBackground{
+    background-color:white!important;
+}
+/*Safari support of oswald*/
+body.isSafari{
+    font-family: 'oswald_regularregular', "Helvetica Neue", Tahoma, sans-serif;
+}
+
+body.isSafari .superHeroText {
+    font-family: 'oswald_regularregular', "Helvetica Neue", Tahoma, sans-serif;
+}
+
+body  
+{ 
+    font-family: 'Oswald',"Helvetica Neue", Tahoma, sans-serif;
+    font-size : 17px; 
+    text-rendering: optimizeLegibility; 
+    -webkit-font-smoothing: antialiased;
+}
+
+.banger{
+    font-family: 'Bangers', "Helvetica Neue", Tahoma, cursive;
+}
+
+input,
+button  {-webkit-font-smoothing: antialiased; }
+ 
+p {
+    font-size: 1em;
+    line-height: 1.8;
+    margin: 0 0 1em;
+
+    -moz-osx-font-smoothing: grayscale;
+
+     word-break: break-all;  
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;  
+}
+
+h1.heading      { font-size: 3em;       /* 2*16 = 32 */         }
+h1      { font-size: 3em;       /* 2*16 = 32 */         }
+h2      { font-size: 2.25em;     /* 1.5*16 = 24 */       }
+h3      { font-size: 1.755em!important;    /* 1.17*16 = 18.72 */   }
+h4      { font-size: 1.5em;       /* 1*16 = 16 */         }
+h5      { font-size: 1.245em;    /* 0.83*16 = 13.28 */   }
+h6      { font-size: 1.125em;    /* 0.75*16 = 12 */      }
+
+a,
+a:visited   {   text-decoration: none;  }
+ 
+a:hover     {   text-decoration: none; background-color: transparent;}
+
+strong  {   font-weight: bold;  }
+em      {   font-style: italic; }
+
+/* Mobile Fonts =============================*/
+@media only screen and (max-width: 768px) {
+    h1.heading      { font-size: 2em;       /* 2*16 = 32 */         }
+h3      { font-size: 1.2em!important;    /* 1.17*16 = 18.72 */   }
+
+}

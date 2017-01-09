@@ -1,0 +1,1713 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* Common selectors ===========================================================*/
+.vertical-center {
+    height: 100%;
+    width: 100%;
+    text-align: center; /* align the inline(-block) elements horizontally */
+    font: 0/0 a; /* remove the gap between inline(-block) elements */
+}
+
+    .vertical-center:before { /* create a full-height inline block pseudo=element */
+        content: " ";
+        display: inline-block;
+        vertical-align: middle; /* vertical alignment of the inline element */
+        height: 100%;
+    }
+
+    .vertical-center > .container {
+        max-width: 100%;
+        display: inline-block;
+        vertical-align: middle; /* vertical alignment of the inline element */
+        /* reset the font property */
+        font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+@media (max-width: 768px) {
+    .vertical-center:before {
+        height: auto;
+        /* Or */
+        display: none;
+    }
+}
+
+.vertical-center {
+    min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+}
+
+/* Flag style ===========================================================*/
+a.flags img {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+}
+
+
+.push-wrap a.flags {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+nav#body-nav #spainFlag {
+    margin-right: 30px !important;
+}
+
+nav#body-nav a.flags img {
+    width: 52px;
+    height: 52px;
+}
+/* SuperHero ===========================================================*/
+/*Container*/
+.sa-header-1, div.navigationHero {
+    background-color: #8fc461;
+}
+
+#navigationHeroId {
+    padding-top: 76px;
+    min-height: 400px; /* Min hight the image can take*/
+    font-size: 45px;
+}
+/*Image*/
+div#imageBox {
+    width: auto;
+    max-height: 851px;
+}
+
+    div#imageBox source,
+    div#imageBox img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+/*Text*/
+.superHeroTitle {
+    text-align: center;
+    color: white;
+    font-family: 'Bangers', cursive, Tahoma;
+    font-size: 1em;
+}
+
+.superHeroText {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75em;
+    color: black;
+}
+
+.heroParagraphSeparator {
+    margin-bottom: 50px;
+}
+
+.stroke {
+    /* WebKit (Safari/Chrome) Only */
+    -webkit-text-stroke: 0.03em black;
+    /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead
+    -webkit-text-fill-color: white; */
+    text-shadow: 0.03em 0.03em 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+    -0.03em -0.03em 0 #000, 0.03em -0.03em 0 #000, -0.03em 0.03em 0 #000, 0.03em 0.03em 0 #000;
+}
+
+.superHeroTitle .fa-code {
+    color: red;
+}
+
+.superHeroTitle .fa-html5 {
+    padding-right: 7px;
+    color: purple;
+}
+
+/*Screen higher than 1200 px*/
+@media only screen and (min-width: 1200px) {
+    #imageBox {
+        text-align: right;
+        padding-right: 25px;
+    }
+
+    .superHeroText {
+        max-width: 350px;
+        /*Align left*/
+        padding-right: 10px;
+        float: left !important;
+    }
+
+    #textBox {
+        padding-left: 25px;
+        padding-top: 50px;
+        /*Align left*/
+        padding-right: 10px;
+        float: left !important;
+    }
+}
+/*Screen between 992 px and 1200px*/
+@media only screen and (min-width: 992px) and (max-width : 1200px) {
+    #imageBox {
+        text-align: right;
+    }
+
+    .superHeroText {
+        max-width: 300px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto; /*Center*/
+    }
+
+    #textBox {
+        padding-top: 50px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto; /*Center*/
+    }
+}
+/*Screen lower than 992px px*/
+@media only screen and (max-width: 992px) {
+    #imageBox {
+        text-align: center;
+    }
+
+    #textBox {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/* Mobile Navigation ===========================================================*/
+/*Font of menu items, padding of items, so on*/
+#body-nav h2.logo{
+    font-size: 22px!important;
+}
+#body-nav ul {
+    padding-bottom: 20px;
+}
+
+    #body-nav ul li a {
+        font-size: 1.7em;
+        border: 0;
+        height: 70px;
+        line-height: 70px;
+    }
+    #body-nav ul li a.logoMobile{
+        color:orange;       
+    }
+/*Burger buttons*/
+
+a.toggle-nav, a.toggle-nav:visited {
+    color: white;
+    font-size: 2em;
+    width: 55px;
+    height: 55px;
+    left: 10px;
+    top: 10px;
+}
+
+    /*a.toggle-nav:hover {
+        color: orange;
+        border-radius: 100%;
+    }*/
+
+/*Setting main font*/
+.mobileNav {
+    -webkit-backface-visibility: hidden;
+    font-size: 30px;
+}
+/*Centering elements vertically in absolute div*/
+.centerAbsoluteVertically {
+    display: table; /*To center elements vertically*/
+}
+
+    .centerAbsoluteVertically div,
+    .centerAbsoluteVertically ul {
+        display: table-cell;
+        vertical-align: middle;
+    }
+/*Icon size, color, and aligning*/
+.iconBoxShare {
+    padding-right: 1%;
+    font-size: 1em;
+}
+
+.mobileNav span {
+    margin-right: 8px;
+}
+
+    .mobileNav span.fa-stack {
+        color: white;
+    }
+
+    .mobileNav span.facebook {
+        color: #336699;
+    }
+
+    .mobileNav span.linkedin {
+        color: #0066cc;
+    }
+
+    .mobileNav span.twiter {
+        color: #33ccff;
+        margin-right: 0px;
+    }
+
+.mobileNav i.fa-stack-1x {
+    color: white;
+}
+/*Text size and aligning and hidden when screen */
+#textBoxShare {
+    margin-top: 23px;
+    color: white;
+    font-size: 0.8em;
+}
+
+@media only screen and (max-width: 500px) {
+    #textBoxShare {
+        display: none;
+    }
+}
+/*Logo*/
+#logoMovilBox {
+    font-size: 0.3em;
+    position: fixed;
+    left: 90px;
+    top: 22px;
+}
+
+.logo p {
+    line-height: 0.3;
+    font-family: 'Bangers', cursive;
+    color: orange /*#8fc461*/ !important;
+    /* WebKit (Safari/Chrome) Only */
+    -webkit-text-stroke: 0.03em black;
+    /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead
+    -webkit-text-fill-color: white; */
+    text-shadow: 0.03em 0.03em 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+    -0.03em -0.03em 0 #000, 0.03em -0.03em 0 #000, -0.03em 0.03em 0 #000, 0.03em 0.03em 0 #000;
+}
+
+.logoFirstLine {
+    text-align: left;
+}
+
+.logoSecondLine {
+    text-align: left;
+}
+
+@media only screen and (max-width: 400px) {
+    #logoMovilBox {
+        display: none;
+    }
+}
+
+/*Navigation bar properties*/
+.mobileNav {
+    z-index: 3;
+    height: 72px;
+    width: 100%;
+    position: absolute;
+}
+
+/* Logo and desktop Navigation ===========================================================*/
+/*Height of the navigation*/
+#sa-header-nav {
+    height: 72px !important;
+}
+
+    #sa-header-nav .container {
+        height: 72px !important;
+    }
+
+#sa-navbar-collapse {
+    height: 72px !important;
+}
+
+    /*Remove padding and margin in flags*/
+    #sa-navbar-collapse .flagNav a {
+        padding: 0;
+        margin: 0;
+    }
+/*Logo and hover of links*/
+.logo {
+    font-family: 'Bangers', cursive;
+    font-size: 2em !important;
+    color: orange /*#8fc461*/ !important;
+    /* WebKit (Safari/Chrome) Only */
+    -webkit-text-stroke: 0.03em black;
+    /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead
+    -webkit-text-fill-color: white; */
+    text-shadow: 0.03em 0.03em 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+    -0.03em -0.03em 0 #000, 0.03em -0.03em 0 #000, -0.03em 0.03em 0 #000, 0.03em 0.03em 0 #000;
+}
+
+    .logo:hover {
+        color: white !important;
+    }
+
+.navbar-home .navbar-nav li a:hover {
+    color: orange !important;
+    background-color: transparent;
+    font-family: 'Bangers', cursive;
+    font-size: 1.2em;
+    /* WebKit (Safari/Chrome) Only */
+    -webkit-text-stroke: 0.03em black;
+    /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead
+    -webkit-text-fill-color: white; */
+    text-shadow: 0.03em 0.03em 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+    -0.03em -0.03em 0 #000, 0.03em -0.03em 0 #000, -0.03em 0.03em 0 #000, 0.03em 0.03em 0 #000;
+}
+
+/* Social icons ===========================================================*/
+.socialIcons {
+    position: fixed;
+    top: 75px;
+    right: 0%;
+    z-index: 1111;
+    text-align: left !important;
+    font-size: 25px;
+}
+
+.iconBoxShare {
+    padding-right: 1%;
+    font-size: 1em;
+}
+
+.socialIcons span {
+    margin-right: 8px;
+}
+
+    .socialIcons span.fa-stack {
+        color: white;
+    }
+
+    .socialIcons span.facebook {
+        color: #336699;
+    }
+
+    .socialIcons span.linkedin {
+        color: #0066cc;
+    }
+
+    .socialIcons span.twiter {
+        color: #33ccff;
+    }
+
+.socialIcons i.fa-stack-1x {
+    color: white;
+}
+
+/* Index page ===========================================================*/
+/* Container*/
+.sa-features-1 .row {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+    /* Image*/
+    .sa-features-1 .row .sa-features-image {
+        padding-top: 50px;
+        margin-bottom: 20px;
+    }
+/*Text*/
+.sa-features-text p {
+    max-width: 500px;
+    display: inline-block;
+    text-align: left;
+}
+
+.sa-features-text .sa-section-header {
+    text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+    .sa-features-text p {
+        text-align: center;
+    }
+
+    .sa-features-text .sa-section-header {
+        text-align: center;
+    }
+}
+
+/* Portfolio grid*/
+.sa-features-portfolio .col-xs-12 {
+    display: inline-block;
+    text-align: center;
+}
+
+.sa-features-portfolio img {
+    padding-top: 0!important;
+    height: 200px;
+    width: auto;
+}
+
+    .sa-features-portfolio img.between {
+        padding-right: 30px;
+    }
+
+@media only screen and (max-width:992px) {
+    .sa-features-portfolio img {
+        padding-top: 30px;
+        height: 150px;
+        width: auto;
+    }
+}
+/* buttons */
+.btn-form.btn-scroll {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+    .btn-form.btn-scroll a {
+        margin-top: 15px !important;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+a.btn {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+    a.btn:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: orange;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+
+    a.btn:hover, a.btn:focus, a.btn:active {
+        color: white;
+        border-color: orange;
+    }
+
+        a.btn:hover:before, a.btn:focus:before, a.btn:active:before {
+            -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+        }
+/* About page - Button for scroll up ===========================================================*/
+div.scrollUpButton{
+    position: fixed;
+    bottom: 0;
+    right:0;
+    z-index:2000;
+    margin:0!important;
+}
+div.scrollUpButton p{
+    font-size:14px;
+    margin:0;
+    color:black;
+}
+div.scrollUpButton .btn{
+    background-color: orange; 
+
+}
+div.scrollUpButton .btn i{
+    margin:0;
+
+}
+
+/* About page - What about me section ===========================================================*/
+.sa-features-3.skills {
+    padding: 0 !important;
+}
+
+div.ulCenter {
+    display: inline-block;
+    text-align: left;
+
+    max-width:540px;
+    margin: 0 auto; 
+}
+div.ulCenter p{
+    text-align: left;
+}
+div.ulCenter ul.fa-ul {
+    color: rgba(0, 0, 0, 0.65);
+
+    display: inline-block;
+    text-align: left;
+
+    max-width: 470px;
+}
+
+    ul.fa-ul li {
+        font-size: 1em;
+        line-height: 1.8;
+        margin: 0 0 1em;
+        -moz-osx-font-smoothing: grayscale;
+        word-break: break-all;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
+
+    ul.fa-ul a {
+        color: rgba(0, 0, 0, 0.65);
+    }
+
+        ul.fa-ul a:hover {
+            color: #8fc461;
+        }
+
+/* About page - Skills ===========================================================*/
+/*Text*/
+h3.title {
+    padding-bottom: 10px;
+    font-size: 1.2em !important;
+}
+
+h4.subject {
+    padding-top: 45px;
+    font-size: 1em !important;
+}
+
+/*Icon of the heading*/
+.sa-section-header.with-sub-section-heading .sub-section-heading { /*Icon subheading*/
+    font-family: FontAwesome;
+    font-weight: 900;
+    left: 100px;
+    top: -70px;
+    z-index: 1 !important;
+}
+
+.banger.heading {
+    z-index: 200 !important;
+}
+/*Labels*/
+div.labelContainer {
+    text-align: left;
+    margin-left: -15px !important;
+    margin-bottom: 20px;
+}
+
+    div.labelContainer span {
+        line-height: 2.5 !important;
+    }
+
+.graySeparator {
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+/* About page - Experience ===========================================================*/
+.workExperience .each-features{
+    margin-bottom:30px;
+}
+.workExperience .each-features p.detail{
+    margin-right:0;
+}
+
+/*set height depending on screen*/
+@media only screen and (min-width: 1200px) {/* Large Desktop lg*/
+    .workExperience .each-features-body{
+        height: 370px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width : 1200px) {/* Mediun Desktop md */
+    .workExperience .each-features-body{
+        height: 278px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width : 992px) {/* Tablet sm */
+     .workExperience .each-features-body{
+        height: 308px;
+    }   
+}
+/* About page - Education ===========================================================*/
+/*Removing padding, margin, and borders*/
+
+.sa-features-6 secondRow.each-features {
+    margin: 0;
+    margin-top: 30px;
+}
+
+.sa-features-6 .each-features-body {
+    padding: 0 !important;
+    border: 0 !important;
+}
+/*div.mapContainer img { 
+    border-radius:50%;
+}*/
+@media only screen and (max-width : 768px) { /* phone xs */
+    div.mapContainer { /*Center map in phones*/
+        display: inline-block;
+        text-align: center;
+    }
+
+    .education .each-features { /*Fix the padding problem in this div*/
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .education div.mapContainer.each-features { /*Fix the padding problem in this div*/
+        padding: 0 15px 0 15px;
+
+    }
+    .education .equalize.each-features { /*Fix the padding problem in this div*/
+     padding: 0 15px 0 15px;
+
+    }
+    .sa-features-6 .each-features-body { /* Make everything the same width*/
+        width: 428.99px !important;
+        max-width: 100% !important;
+        display: inline-block;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width : 992px) { /* Mediun Desktop md */   
+    .sa-features-6 .nextToImage .each-features-body { /* set boxes height to images height*/
+        height: 296.3px !important;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width : 1200px) { /* Mediun Desktop md */   
+    .sa-features-6 .nextToImage .each-features-body { /* set boxes height to images height*/
+        height: 392.47px !important;
+    }
+    .sa-features-6 .addMarginsToEducationBoxes{
+    margin-top:30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) { /* Large Desktop lg*/
+    .sa-features-6 .largeScreenEducation .each-features-body { /* set boxes height to images height*/
+        height: 362.41px !important;
+    }
+}
+
+/*Logo dimension*/
+div.logoEducationBox {
+    height: 45px;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+    div.logoEducationBox img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+/*Text  */
+.education .each-features-body h3.title{
+    margin: 0 10px 20px 10px!important;
+}
+h3.title {
+    margin-bottom: 20px !important;
+}
+
+.workExperience p.detail {
+    margin-right: 17px;
+}
+/*Large screen*/
+.largeScreenEducation .each-features{
+    padding:0;
+}
+.largeScreenEducation .mapContainer.each-features{
+    padding-right:30px;
+}
+/* About page - People ===========================================================*/
+/*slider*/
+@media only screen and (max-width : 400px) { /* phone xs */
+    div.sliderButtons .btn-form .btn {
+        min-width: 20px !important;
+    }   
+}
+
+div.sliderButtons .btn-form .btn {
+    min-width: 100px !important;
+}
+div.sliderButtons .btn-form .btn i {
+    margin:0;
+}
+.sliderButtons .btn-form.btn-scroll {
+    margin: 0;
+}
+
+.sliderButtons {
+    margin-top: -90px;
+    text-align: center;
+}
+
+    .sliderButtons a {
+        background-color: #f5f5f5 !important;
+        color: black;
+    }
+
+        .sliderButtons a.btn:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: black;
+            -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+            -webkit-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+            -webkit-transition-property: transform;
+            transition-property: transform;
+            -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+        .sliderButtons a.btn:hover, .sliderButtons a.btn:focus, .sliderButtons a.btn:active {
+            color: white;
+            border-color: black;
+        }
+
+            .sliderButtons a.btn:hover:before, .sliderButtons a.btn:focus:before, .sliderButtons a.btn:active:before {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+            }
+/*Row*/
+div.peopleItem {
+    padding: 50px 0 50px 0;
+}
+/*Quotes, sign, and linkedin*/
+.anchorLinkedin{
+    margin-top:10px;
+    color: #0066cc;
+    text-align:center;
+    font-size: 12px;    
+}
+.anchorLinkedin span{
+    padding-right:5px;   
+}
+
+blockquote.detail span {
+    font-size: 1.5em;
+    padding: 0 12px 0 12px;
+}
+
+blockquote.detail {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.65);
+    border: 0;
+    font-size: 1em !important;
+    line-height: 1.8 !important;
+
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+h4.name {
+    margin-bottom:0;
+    color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+}
+
+/*Images*/
+.peopleItem .peopleImage {
+    background-color: white !important;
+}
+
+    .peopleItem .peopleImage img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+@media only screen and (max-width : 768px) { /* phone xs */
+    .peopleItem .peopleImage {
+        height: 200px;
+        text-align: center;
+        display: inline-block;
+        padding-bottom: 20px;
+    }
+}
+
+/*Text*/
+.people h4.name{
+    color: black;
+    font-size: 1.3em;
+    padding-top: 10px;
+}
+
+/* Footer ===========================================================*/
+/*Large icons*/
+.footerTitle {
+    font-size: 1.2em;
+    padding-bottom: 100px;
+    color: white;
+}
+
+.largeIconsFooter.features-content-body .each-features a:hover {
+    color: orange;
+    /* WebKit (Safari/Chrome) Only */
+    -webkit-text-stroke: 0.03em black;
+    /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead
+    -webkit-text-fill-color: white; */
+    text-shadow: 0.03em 0.03em 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+    -0.03em -0.03em 0 #000, 0.03em -0.03em 0 #000, -0.03em 0.03em 0 #000, 0.03em 0.03em 0 #000;
+}
+
+.largeIconsFooter.features-content-body .each-features a {
+    color: white;
+}
+/*Site Map*/
+ul.siteMap a:hover {
+    color: orange;
+}
+
+ul.siteMap{
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.65);
+    text-align: left;
+}
+ul.siteMap a{
+    text-decoration:none;
+    color: rgba(0, 0, 0, 0.65);
+
+}
+
+ul.siteMap li.firstLevel a {
+    color: black;
+    font-weight: bold;
+}
+
+    ul.siteMap li.firstLevel a:hover {
+        color: orange;
+    }
+
+.sa-section-separator.sa-site-map {
+    padding: 30px 0 30px 0;
+}
+
+.each-features-body.imageFooterContainer {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Contact ===========================================================*/
+/*Messages of success and error for contact form*/
+
+
+.showMessage a.socialLink.contactMessages.showMessage{
+    display:block!important;
+}
+
+.showGoogleDownMessage a.socialLink.contactMessages.showGoogleDownMessage{
+    display:block!important;
+}
+.showMessage a.socialLink{
+    display:none!important;
+}
+.showGoogleDownMessage a.socialLink{
+    display:none!important;
+} 
+.monitorWrapper a.socialLink.contactMessages{
+    max-width:250px;
+}
+.monitorWrapper a.socialLink.contactMessages i{
+     padding-right:10px!important;
+     font-size: 1.2em;
+}
+/*Submit button if javascript disable*/
+#submitContactFormButton{
+    display:none!important;
+}
+.no-js #submitContactFormButton{
+    display: block;
+}
+/*catpcha button style*/
+.g-recaptcha {
+    transform:scale(1.2);
+    transform-origin:0 0;
+}
+/*Position of icons in mobile screen*/
+@media only screen and (max-width : 355px) 
+{
+    div.monitorWrapper a.socialLink {
+        font-size: 17px!important;
+    }   
+}
+
+/*Wrapper positioning, margins, and font-size*/
+div.monitorWrapper {
+    text-align:left;
+    position: absolute;
+    top:189px;
+}
+    div.monitorWrapper a#linkedinScreenLinks {
+        padding-top: 15px;
+        display: block;
+    }
+
+div.monitorWrapper a.socialLink {
+    font-size: 22px;
+}
+
+div.monitorWrapper a.socialLink span {
+    margin-right: 10px;
+}
+
+/*Color of icons*/
+a.socialLink span .fa-linkedin, a.socialLink span .fa-facebook {
+    color: white;
+}
+
+div.monitorWrapper a#facebookScreenLinks {
+    color: #336699;
+}
+
+div.monitorWrapper a#linkedinScreenLinks {
+    color: #0066cc;
+}
+
+/*Hover of anchor*/
+a.socialLink:hover {
+    text-decoration: none;
+    color: orange !important;
+}
+
+a.socialLink:visited {
+    text-decoration: none;
+}
+/*Text area and inputText*/
+textarea.form-control {
+    height: 150px;
+    width:363px;
+}
+#contact-us-form input{
+    width: 363px;
+}
+/*Button aling*/
+.sa-registation-form-1 .sa-registation-form-contant .btn-form {
+    text-align: left; 
+}
+.sa-registation-form-1 .sa-registation-form-contant .btn-form a {
+    width: 363px; 
+}
+/*Form positioning*/
+@media only screen and (min-width: 768px) and (max-width : 992px) {/* Tablet sm */
+        div.monitorWrapper a.socialLink {
+        font-size: 17px!important;
+    }   
+}
+@media only screen and (max-width: 768px) {/* mobile xs*/
+    #monitorImage{
+        padding-top:10px!important;
+    }
+    textarea.form-control {
+        width:100%;
+        max-width:100%;
+    }
+    #contact-us-form input{
+        width:100%;
+        max-width:100%;
+
+    }
+
+   .text-xs-center {
+    text-align: center;
+    margin-left:-30px;
+    }
+
+    .g-recaptcha {
+    display: inline-block;
+    }
+
+    .buttonsContactForm .btn-form a{
+
+        display:inline-block;
+        text-align: center!important;
+        margin:0 auto!important;
+
+        width:363px;
+        max-width: 100%;
+    }
+    .sa-registation-form-1 .sa-registation-form-contant .btn-form {
+    text-align: center;
+    padding-top:15px; 
+    }
+}
+
+/*Heading*/
+.sa-registation-form-contant .title.hidden-sm{
+    padding-top:10px;
+}
+/*Image*/
+#monitorImage{
+    padding-top:50px;
+}
+
+/* Projects ===========================================================*/
+/*Caption and div of the caption in mobile view*/
+@media only screen and (max-width : 400px) 
+{
+    .projects .sa-features-portfolio div {
+        max-width:100%;
+        width: 400px;
+    }
+    div.projectCaption{
+        width:250px!important;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width : 768px) 
+{
+    div.projectCaption{
+        width:250px!important;
+        max-width: 100%;
+    }
+}
+
+/*Stick big picture to bottom*/
+section.projectBackground .row{
+    padding-bottom:0!important;
+}
+/* Heading-Image align, font, size*/
+section.projectBackground span{
+    padding: 0 20px 0 20px;
+    color:orange;
+}
+section.projectBackground{
+    background-color:#5b71bd;
+    margin-top: 70px;
+
+}
+section.projectBackground img{
+    margin-top: 70px;
+}
+section.projectBackground h1{
+    padding-top: 70px;
+    padding-right:80px;
+    color: white;
+    line-height: 1.5;
+
+    display:inline-block;
+    text-align: center;
+    margin:0 auto;
+    width: 450px;
+    max-width: 100%;
+    
+}
+
+
+/*Caption*/
+div.projectCaption a.btn span{
+    padding-left: 10px;
+    margin-right:0;
+}
+div.projectCaption h6{
+    margin:0;
+    padding: 20px 20px 30px 20px;
+}
+
+div.projectCaption{
+    padding-bottom: 20px;
+
+    background: #ffffff;
+    /*box-shadow: 0 1px 12px 0px rgba(51, 51, 51, 0.23);
+    -moz-box-shadow: 0 1px 12px 0px rgba(51, 51, 51, 0.23);
+    -webkit-box-shadow: 0 1px 12px 0px rgba(51, 51, 51, 0.23);
+    -o-box-shadow: 0 1px 12px 0px rgba(51, 51, 51, 0.23);*/
+}
+.projects .sa-features-portfolio div.projectCaption {
+    padding-top: 0;
+}
+
+/*Grid: size of images, mobile grid*/
+.thumbnailWhiteBackground{
+    border-bottom: 1px solid;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+.projects img {
+    padding:0;
+    width: 250px;
+    height:auto; 
+}
+.projects .sa-features-portfolio div {
+    padding-top: 30px;
+}
+/* Blog ===========================================================*/
+.blogContainer .row div{
+    padding: 100px 0 100px 0;
+}
+.blog span{
+    font-size: 150px;
+    margin: 50px 0 50px 0;
+    padding-left: 30px;
+}
+
+/* Scroll message ===========================================================*/
+.no-js .scrollMessage.scrollWrapper{
+    display:none;
+}
+.scrollMessage.scrollWrapper{
+    width:100%;
+    height: 40px;
+
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+
+    position: fixed;
+    bottom:0;
+    left:0;
+    z-index: 1000;
+    display:block;
+}
+    .scrollMessage.scrollWrapper a{
+        text-decoration:none;
+        color:white;
+    }
+    .scrollMessage.scrollWrapper a:hover{
+        color: orange;
+    } 
+.scrollWrapper{
+    display: none;
+}
+
+.flag-icon-background {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+.flag-icon {
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 1.33333333em;
+  line-height: 1em;
+}
+.flag-icon:before {
+  content: "\00a0";
+}
+.flag-icon.flag-icon-squared {
+  width: 1em;
+}
+.flag-icon-uk {
+  background-image: url('../Images/gb.svg');
+}
+.flag-icon-es {
+    background-image: url('../Images/es.svg');
+}
+/* Item Projects ===========================================================*/
+section.itemProject .nav>li>a, section.itemProject .nav>li>a:visited {
+    padding: 0;
+    background-color:transparent;    
+}
+section.itemProject .nav>li>a:hover {
+    color:orange;
+    background-color:transparent;    
+}
+section.itemProject .hidden-sm h1{
+    margin-top:80px;
+}
+
+section.itemProject img{
+border: solid 1px;
+border-color:#5b71bd;
+}
+
+/*Remove margins*/
+section.itemProject h1{
+    margin-top:0;
+}
+section.itemProject .sa-section-header.with-sub-section-heading{
+    margin-bottom:10px;
+    max-width: 600px;
+}
+section.itemProject .sa-features-text h1{
+    margin-top:0;
+}
+
+/* CV ===========================================================*/
+/* Messages */
+#downloadForm p.email-failed{
+     font-size: 1em;
+}
+#downloadForm p.email-failed i{
+     padding-right:10px!important;
+     font-size: 1em;
+}
+#downloadForm p.email-failed a{
+    border-bottom: solid 1px;
+    color:inherit;
+}
+/*Heading and background*/
+.projectBackground.cv .banger.heading{
+    color: black;
+    text-align:left;
+}
+
+.projectBackground.cv{
+    background-color:white;
+}
+/*input text*/
+#downloadForm input.form-cus{
+    width: 157.33px;
+    height: 50px!important;
+    display:inline-block;
+    text-align:center;
+}
+/*Button*/
+.projectBackground.cv .btn-form.btn-scroll{ 
+    display:inline-block;
+    margin-top:0;
+    margin-left:0!important;
+}
+.projectBackground.cv .btn-form.btn-scroll a{
+    margin-top:0!important;
+}
+#downloadForm .btn-form.btn-scroll{
+    margin-left: 15px;
+}
+.no-js #anchorButton{
+    display:none;
+}
+#normalButton{
+    display:none;
+}
+.no-js #normalButton{
+    display:block!important;
+}
+/* Fixes in Mobile ===========================================================*/
+@media only screen and (max-width : 768px) {/* phone xs */
+    /* cv*/
+    .projectBackground.cv .banger.heading{
+    text-align:center;
+    }
+    /* Index page*/
+    #smallPortfolioButton{
+        margin-top:0;
+    }
+    #textBox{
+        padding-top:20px;
+        padding-bottom:0;
+    }
+    section .row{
+        padding-top: 20px!important;
+        padding-bottom: 20px!important;
+    }
+    span.footerDavidAlcocer{
+        display: block;
+        padding-bottom: 10px;
+    }
+    #pizarraImageContainer{
+        padding-top:0;
+    }
+    .smallPortfolio.sa-features-portfolio img{
+        margin:0!important;
+    }
+    /* About page */
+    div.ulCenter {
+    text-align: center;
+    }
+    .whatAbout .sa-features-text p{
+        margin-top:20px;
+    } 
+    .row.progress{
+        padding:0!important;
+    }
+    .whatAbout.sa-features-1 .row{
+        padding-top: 70px!important;
+    }
+    #pensamiento{
+        margin-top:0;
+    }
+    .sa-section-header.with-sub-section-heading .sub-section-heading {
+        font-size: 70px;
+        right: 60px;
+        top: 0px;
+    }
+    .mapHeading.sa-section-header.with-sub-section-heading{
+        margin-bottom:0;
+    }
+    .peopleSayHeading.sa-section-header.with-sub-section-heading{
+        margin-bottom:0;
+    }
+    div.peopleItem{
+        padding:0;
+    }
+    blockquote.detail{
+        padding-top:20px;
+        margin-bottom:0!important;
+        max-width: 530px;
+    }
+    .peopleItem .row.item{
+        padding-bottom:0!important;
+    }
+    div.peopleImage{
+        padding-bottom:0!important;
+    }
+    .sliderButtons {
+    margin-top: 0px;
+    }
+    /* Projects page */
+    section.projectBackground h1{
+        margin:0;
+        padding:0;
+    }
+    section.projectBackground .row{
+        padding-bottom:0!important;
+    }
+    #risa{
+        margin-top:20px;
+    }
+    /* Contact*/
+    .monitorWrapper a.socialLink.contactMessages{
+        max-width:200px;
+    }
+    .sa-registation-form-contant .title{
+        margin: 40px 0 20px 0;
+    }
+        .sa-registation-form-contant .title{
+        margin: 40px 0 20px 0;
+    }
+    div.monitorWrapper{
+        top:320px;
+    }
+    .sa-registation-form-contant div.title h3{
+        margin-top:0;
+    }
+    /* Footer*/
+    .footerTitle{
+        padding:0;
+        padding-bottom:20px;
+    }
+    .largeIconsFooter .each-features{
+        border:0!important;
+    }
+    ul.siteMap{
+    text-align: center;
+}
+
+    /* Blog*/
+    .blogContainer .row div{
+    padding: 0;
+    }
+    /* Item Projects*/
+        section.itemProject img{
+        margin-top:0;
+        margin-bottom: 20px;
+        border-radius:50%;       
+        height:auto;
+        width: 250px;
+        
+        }
+
+        section.itemProject .sa-section-header.with-sub-section-heading{
+            max-width: none;
+        }
+    section.itemProject .sa-section-header.with-sub-section-heading .wrapperItemTitleAnDescription{
+        margin-top:70px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+
+        width: 450px;
+        max-width: 100%;
+
+    }
+        section.itemProject .sa-section-header.with-sub-section-heading {
+        margin-top:70px;
+
+    }
+ }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+    /*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+        a[href]:after {
+            content: " (" attr(href) ")";
+        }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
